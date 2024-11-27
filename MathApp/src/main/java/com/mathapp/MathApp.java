@@ -10,6 +10,8 @@ public class MathApp extends Application {
 
     @Override
     public void start(Stage primaryStage) {
+        DataBase database = new DataBase();
+        database.connect();
         Label label = new Label("Welcome to Math Learning Application");
         StackPane root = new StackPane();
         root.getChildren().add(label);
