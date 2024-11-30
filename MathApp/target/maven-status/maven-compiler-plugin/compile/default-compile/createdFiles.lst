@@ -1,10 +1,12 @@
 com/mathapp/DataBase.class
 subjects.class
+com/mathapp/MathFact.class
+com/mathapp/difficulty.class
 Lesson.class
-User.class
 com/mathapp/MathApp.class
+com/mathapp/Exercise.class
+com/mathapp/LogIn.class
+com/mathapp/User.class
 Meme.class
-Exercise.class
 SubjectTheory.class
-difficulty.class
-MathFact.class
+com/mathapp/SignUp.class

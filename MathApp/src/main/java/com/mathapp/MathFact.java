@@ -1,7 +1,6 @@
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+package com.mathapp;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 
 
 public class MathFact{

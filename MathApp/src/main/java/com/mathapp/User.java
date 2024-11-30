@@ -1,7 +1,13 @@
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+package com.mathapp;
+// import javafx.application.Application;
+// //import ro.pub.cs.aipi.User.controller.Authentication;
+// import javafx.geometry.Insets;
+// import javafx.scene.Scene;
+// import javafx.scene.control.*;
+// import javafx.scene.layout.GridPane;
+// import javafx.stage.Stage;
+
+
 
 public class User{
     private int id;
@@ -16,6 +22,15 @@ public class User{
         this.email = email;
         this.password = pass;
     }
+
+    // @Override
+    // public void start(Stage main) throws Exception{
+    //     new Authentication().start();
+    // }
+
+    // public static void main(String[] args) {
+    //     launch(args);
+    // }
 
     public int getID(){
         return this.id;
@@ -66,5 +81,4 @@ public class User{
         xp = current;
         System.out.println("Current XP of User: " + this.userName + ", is " + xp);
     }
-
 }

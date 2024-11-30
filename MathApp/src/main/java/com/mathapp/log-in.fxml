@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="https://javafx.com/javafx"
+            xmlns:fx="https://javafx.com/javafx"
+            fx:controller="LogIn.java"
+            prefHeight="400.0" prefWidth="600.0">
+
+</AnchorPane>
