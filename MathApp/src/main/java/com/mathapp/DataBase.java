@@ -28,6 +28,10 @@ public class DataBase {
         }
     }
 
+    public static com.mongodb.client.MongoCollection<org.bson.Document> getCollection(String collectionName){
+        return dataBase.getCollection(collectionName);
+    }
+
     
     // public static void main( String[] args ) {
 
