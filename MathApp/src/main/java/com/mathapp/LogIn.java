@@ -5,7 +5,7 @@ import org.bson.Document;
 
 public class LogIn{
     public static boolean Authentificate(String username, String password){
-        MongoCollection<Document> documents = DataBase.getCollection("User");
+        MongoCollection<Document> documents = DataBase.getCollection("Users");
         Document userDoc = documents.find(new Document("username",username)).first();
         if(userDoc != null){
             String mongoPassword = userDoc.getString("password");

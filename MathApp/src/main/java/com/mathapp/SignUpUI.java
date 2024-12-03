@@ -3,6 +3,7 @@ package com.mathapp;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -29,8 +30,8 @@ public class SignUpUI{
         TextField surnameField = new TextField();
         TextField usernameField = new TextField();
         TextField emailField = new TextField();
-        TextField passwordField = new TextField();
-        TextField confirmPasswordField = new TextField();
+        PasswordField passwordField = new PasswordField();
+        PasswordField confirmPasswordField = new PasswordField();
 
         Label resultLabel = new Label();
 
@@ -44,14 +45,17 @@ public class SignUpUI{
             String enteredPassword = passwordField.getText();
             String enteredConfirmPassword = confirmPasswordField.getText();
 
-            if(enteredPassword.equals(enteredConfirmPassword))
-                resultLabel.setText("Sign Up Successful.");
-            else
-                resultLabel.setText("Log In Unsuccessful.");
+        boolean success=SignUp.authentificate(enteredName, enteredSurname, enteredUsername, enteredEmail, enteredPassword, enteredConfirmPassword);
+        
+        if(success){
+            resultLabel.setText("Successful Sign Up.");
+        }
+        else
+            resultLabel.setText("Unsuccessful Sign Up.");
         });
 
         VBox root = new VBox(10);
-        root.getChildren().addAll(nameLabel, nameField, surnameLabel, surnameField, usernameLabel, usernameField, emailLabel, emailField, passwordLabel, passwordField, confirmPasswordField, confirmPasswordLabel, signupButton, resultLabel);
+        root.getChildren().addAll(nameLabel, nameField, surnameLabel, surnameField, usernameLabel, usernameField, emailLabel, emailField, passwordLabel, passwordField, confirmPasswordLabel, confirmPasswordField, signupButton, resultLabel);
 
         // Scene scene = new Scene(root, 300, 200);
         // primaryStage.setScene(scene);

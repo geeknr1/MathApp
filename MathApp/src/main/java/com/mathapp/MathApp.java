@@ -3,7 +3,6 @@ package com.mathapp;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -34,8 +33,9 @@ public class MathApp extends Application {
 
     public static void showDashBoard(){
         VBox dashboard = new VBox(10);
+        MathSubjectsUI subjectsUI = new MathSubjectsUI();
         Label dashboardLabel = new Label("Welcome to fun math.");
-        dashboard.getChildren().addAll(dashboardLabel);
+        dashboard.getChildren().addAll(dashboardLabel, subjectsUI.getMathSubjectsUI());
         Scene dashboardScene = new Scene(dashboard, 800, 600);
         primaryStage.setScene(dashboardScene);    
     }
@@ -44,6 +44,12 @@ public class MathApp extends Application {
         SignUpUI signupUI = new SignUpUI();
         Scene signupScene = new Scene(signupUI.getSignUpUI(), 800, 600);
         primaryStage.setScene(signupScene);
+    }
+
+    public static void showMathSubjects(){
+        MathSubjectsUI subjectsUI = new MathSubjectsUI();
+        Scene subjectsScene = new Scene(subjectsUI.getMathSubjectsUI(), 800, 600);
+        primaryStage.setScene(subjectsScene);
     }
 
     public static void main(String[] args) {
