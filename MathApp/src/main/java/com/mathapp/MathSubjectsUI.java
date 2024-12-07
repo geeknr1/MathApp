@@ -1,10 +1,18 @@
 package com.mathapp;
 
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
 public class MathSubjectsUI{
+
+    private static Stage primaryStage;
+    // @Override
+    // public void start(Stage stage){
+
+    // }
 
     public VBox getMathSubjectsUI(){
 
@@ -19,16 +27,31 @@ public class MathSubjectsUI{
         Button MathematicalAnalysisButton = new Button("Mathematical Analysis curriculum");
 
         AlgebraButton.setOnAction(event->{
+            VBox algebra = new VBox(10);
             SubjectAlgebraUI algebraUI = new SubjectAlgebraUI();
-            Label algebraLabel = new Label();
+            Label algebraLabel = new Label("Welcome to algebra ");
+            algebra.getChildren().addAll(algebraLabel, algebraUI.getAlgebraChaptersUI());
+            Scene algebraScene = new Scene(algebra, 600, 800);
+            primaryStage.setScene(algebraScene);
+
         });
 
         GeometryButton.setOnAction(event->{
-            MathApp.showMathSubjects();
+            VBox geometry = new VBox(10);
+            SubjectGeometryUI geometryUI = new SubjectGeometryUI();
+            Label geometryLabel = new Label("Welcome to geometry.");
+            geometry.getChildren().addAll(geometryLabel, geometryUI.getGeometrySubjectUI());
+            Scene geometryScene = new Scene(geometry, 600, 800);
+            primaryStage.setScene(geometryScene);
         });
 
         MathematicalAnalysisButton.setOnAction(event->{
-            MathApp.showMathSubjects();
+            VBox mathematicalAnalysis = new VBox(10);
+            SubjectMathAnalysisUI mathAnalysisUI = new SubjectMathAnalysisUI();
+            Label mathAnalysisLabel = new Label("Welcome to Mathematical Analysis.");
+            mathematicalAnalysis.getChildren().addAll(mathAnalysisLabel, mathAnalysisUI.getMathAnalysisSubjectUI());
+            Scene mathAnalysisScene = new Scene(mathematicalAnalysis, 600, 800);
+            primaryStage.setScene(mathAnalysisScene);
         });
 
         VBox root = new VBox(10);

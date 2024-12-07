@@ -6,23 +6,22 @@ import javafx.scene.layout.VBox;
 
 public class SubjectGeometryUI{
 
-    public VBox getMathSubjectsUI(){
+    public VBox getGeometrySubjectUI(){
 
         Label fifthGradeLabel = new Label("Geometry chapters for the 5th grade");
+        Button fifthGradeButton = new Button("5th grade");
         Label sixthGradeLabel = new Label("Geometry chapters for the 6th grade");
+        Button sixthGradeButton = new Button("6th grade");
         Label seventhGradeLabel = new Label("Geometry chapters for the 7th grade");
+        Button seventhGradeButton = new Button("7th grade");
         Label eigthGradeLabel = new Label("Geometry chapters for the 8th grade");
+        Button eithGradeButton = new Button("8th grade");
         Label ninthGradeLabel = new Label("Geometry chapters for the 9th grade");
+        Button ninthGradeButton = new Button("9th grade");
         Label tenthGradeLabel = new Label("Geometry chapters for 10th grade");
+        Button tenthGradeButton = new Button("10th grade");
 
         Label resultLabel = new Label();
-
-        Button fifthGradeButton = new Button("5th grade");
-        Button sixthGradeButton = new Button("6th grade");
-        Button seventhGradeButton = new Button("7th grade");
-        Button eithGradeButton = new Button("8th grade");
-        Button ninthGradeButton = new Button("9th grade");
-        Button tenthGradeButton = new Button("10th grade");
 
 
         fifthGradeButton.setOnAction(event->{

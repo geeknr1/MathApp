@@ -14,6 +14,7 @@ public class MathApp extends Application {
         DataBase database = new DataBase();
         database.connect();
         showDashBoard();
+        showMathSubjects();
         showLogIn();
         primaryStage.show();
         // Label label = new Label("Welcome to Math Learning Application");

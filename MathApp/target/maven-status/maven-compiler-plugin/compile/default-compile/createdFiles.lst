@@ -7,7 +7,6 @@ com/mathapp/Geometry6thChaptersUI.class
 com/mathapp/MathematicalAnalysis12thChaptersUI.class
 com/mathapp/DataBase.class
 com/mathapp/FirstGradeUI.class
-subjects.class
 com/mathapp/SignUpUI.class
 com/mathapp/MathApp.class
 com/mathapp/Algebra10thChaptersUI.class
@@ -25,11 +24,12 @@ com/mathapp/Algebra5thChaptersUI.class
 com/mathapp/LogInUI.class
 com/mathapp/Algebra8thChaptersUI.class
 com/mathapp/SignUp.class
+com/mathapp/SubjectTheory.class
 com/mathapp/Algebra11thChaptersUI.class
+com/mathapp/subjects.class
 com/mathapp/MathFact.class
 com/mathapp/difficulty.class
 com/mathapp/SubjectMathAnalysisUI.class
-SubjectTheory.class
 com/mathapp/Algebra7thChaptersUI.class
 com/mathapp/Geometry8thChaptersUI.class
 com/mathapp/Geometry5thChaptersUI.class
