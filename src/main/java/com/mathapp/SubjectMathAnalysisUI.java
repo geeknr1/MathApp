@@ -15,22 +15,22 @@ public class SubjectMathAnalysisUI{
 
         Label resultLabel = new Label();
 
+        Button back = new Button("Back");
+
         eleventhGradeButton.setOnAction(event->{
-            MathApp.showMathSubjects();
+            System.out.println("To be updated.");
         });
 
         twelthGradeButton.setOnAction(event->{
+            System.out.println("To be updated.");
+        });
+
+        back.setOnAction(event->{
             MathApp.showMathSubjects();
         });
 
         VBox root = new VBox(10);
-        //root.getChildren().addAll(usernameLabel, usernameField, passwordLabel, passwordField, loginButton, checkButton, resultLabel);
-
-        // Scene scene = new Scene(root, 300, 200);
-        // primaryStage.setScene(scene);
-        // primaryStage.setTitle("Login Account");
-        // primaryStage.show();
-
+        root.getChildren().addAll(eleventhGradeLabel, eleventhGradeButton, twelthGradeLabel, twelthGradeButton, back, resultLabel);
 
         return root;
    }

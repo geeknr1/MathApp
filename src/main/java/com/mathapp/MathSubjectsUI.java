@@ -22,6 +22,7 @@ public class MathSubjectsUI{
         Button AlgebraButton = new Button("Algebra curriculum");
         Button GeometryButton = new Button("Geometry curriculum");
         Button MathematicalAnalysisButton = new Button("Mathematical Analysis curriculum");
+        Button disconnect = new Button("Quit");
 
         AlgebraButton.setOnAction(event->{
             VBox algebra = new VBox(10);
@@ -51,8 +52,12 @@ public class MathSubjectsUI{
             primaryStage.setScene(mathAnalysisScene);
         });
 
+        disconnect.setOnAction(event->{
+            MathApp.showLogIn();
+        });
+
         VBox root = new VBox(10);
-        root.getChildren().addAll(AlgebraLabel, AlgebraButton, GeometryLabel, GeometryButton, MathematicalAnalysisLabel, MathematicalAnalysisButton, resultLabel);
+        root.getChildren().addAll(AlgebraLabel, AlgebraButton, GeometryLabel, GeometryButton, MathematicalAnalysisLabel, MathematicalAnalysisButton, disconnect, resultLabel);
 
         // Scene scene = new Scene(root, 300, 200);
         // primaryStage.setScene(scene);

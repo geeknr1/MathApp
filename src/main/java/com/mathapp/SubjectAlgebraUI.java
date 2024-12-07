@@ -27,46 +27,46 @@ public class SubjectAlgebraUI{
 
         Label resultLabel = new Label();
 
-        // fifthGradeButton.setOnAction(event->{
-        //     MathApp.showMathSubjects();
-        // });
+        Button back = new Button("Back");
 
-        // sixthGradeButton.setOnAction(event->{
-        //     MathApp.showMathSubjects();
-        // });
+        fifthGradeButton.setOnAction(event->{
+            System.out.println("To be updated.");
+        });
 
-        // seventhGradeButton.setOnAction(event->{
-        //     MathApp.showMathSubjects();
-        // });
+        sixthGradeButton.setOnAction(event->{
+            System.out.println("To be updated.");
+        });
 
-        // eithGradeButton.setOnAction(event->{
-        //     MathApp.showMathSubjects();
-        // });
+        seventhGradeButton.setOnAction(event->{
+            System.out.println("To be updated.");
+        });
 
-        // ninthGradeButton.setOnAction(event->{
-        //     MathApp.showMathSubjects();
-        // });
+        eithGradeButton.setOnAction(event->{
+            System.out.println("To be updated.");
+        });
 
-        // tenthGradeButton.setOnAction(event->{
-        //     MathApp.showMathSubjects();
-        // });
+        ninthGradeButton.setOnAction(event->{
+            System.out.println("To be updated.");
+        });
 
-        // eleventhGradeButton.setOnAction(event->{
-        //     MathApp.showMathSubjects();
-        // });
+        tenthGradeButton.setOnAction(event->{
+            System.out.println("To be updated.");
+        });
 
-        // twelthGradeButton.setOnAction(event->{
-        //     MathApp.showMathSubjects();
-        // });
+        eleventhGradeButton.setOnAction(event->{
+            System.out.println("To be updated.");
+        });
+
+        twelthGradeButton.setOnAction(event->{
+            System.out.println("To be updated.");
+        });
+
+        back.setOnAction(event->{
+            MathApp.showMathSubjects();
+        });
 
         VBox root = new VBox(10);
-        root.getChildren().addAll(fifthGradeLabel, fifthGradeButton, sixthGradeLabel, sixthGradeButton, seventhGradeLabel, seventhGradeButton, eigthGradeLabel, eithGradeButton, ninthGradeLabel, ninthGradeButton, tenthGradeLabel, tenthGradeButton, eleventhGradeLabel, eleventhGradeButton, twelthGradeLabel, twelthGradeButton);
-
-        // Scene scene = new Scene(root, 300, 200);
-        // primaryStage.setScene(scene);
-        // primaryStage.setTitle("Login Account");
-        // primaryStage.show();
-
+        root.getChildren().addAll(fifthGradeLabel, fifthGradeButton, sixthGradeLabel, sixthGradeButton, seventhGradeLabel, seventhGradeButton, eigthGradeLabel, eithGradeButton, ninthGradeLabel, ninthGradeButton, tenthGradeLabel, tenthGradeButton, eleventhGradeLabel, eleventhGradeButton, twelthGradeLabel, twelthGradeButton, back, resultLabel);
 
         return root;
    }

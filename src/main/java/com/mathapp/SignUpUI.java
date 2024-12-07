@@ -9,13 +9,6 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class SignUpUI{
-    // private static final String introducedName;
-    // private static final String introducedSurname;
-    // private static final String introducedUsername;
-    // private static final String introducedEmail;
-    // private static final String introducedPassword;
-    // private static final String confirmPassword;
-    // private static final boolean confirmedPassword;
 
     public VBox getSignUpUI(){
 
@@ -36,6 +29,7 @@ public class SignUpUI{
         Label resultLabel = new Label();
 
         Button signupButton = new Button("Sign Up");
+        Button login = new Button("Log In");
 
         signupButton.setOnAction(event->{
             String enteredName = nameField.getText();
@@ -54,8 +48,12 @@ public class SignUpUI{
             resultLabel.setText("Unsuccessful Sign Up.");
         });
 
+        login.setOnAction(event->{
+            MathApp.showLogIn();
+        });
+
         VBox root = new VBox(10);
-        root.getChildren().addAll(nameLabel, nameField, surnameLabel, surnameField, usernameLabel, usernameField, emailLabel, emailField, passwordLabel, passwordField, confirmPasswordLabel, confirmPasswordField, signupButton, resultLabel);
+        root.getChildren().addAll(nameLabel, nameField, surnameLabel, surnameField, usernameLabel, usernameField, emailLabel, emailField, passwordLabel, passwordField, confirmPasswordLabel, confirmPasswordField, signupButton, login, resultLabel);
 
         // Scene scene = new Scene(root, 300, 200);
         // primaryStage.setScene(scene);

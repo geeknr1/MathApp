@@ -46,9 +46,9 @@ public class MathApp extends Application {
     }
 
     public static void showMathSubjects(){
-        // MathSubjectsUI subjectsUI = new MathSubjectsUI();
-        // Scene subjectsScene = new Scene(subjectsUI.getMathSubjectsUI(primaryStage), 800, 600);
-        // primaryStage.setScene(subjectsScene);
+        MathSubjectsUI subjectsUI = new MathSubjectsUI();
+        Scene subjectsScene = new Scene(subjectsUI.getMathSubjectsUI(primaryStage), 800, 600);
+        primaryStage.setScene(subjectsScene);
     }
 
     public static void main(String[] args) {

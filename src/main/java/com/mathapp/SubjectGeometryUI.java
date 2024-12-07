@@ -23,40 +23,39 @@ public class SubjectGeometryUI{
 
         Label resultLabel = new Label();
 
+        Button back = new Button("Back");
 
         fifthGradeButton.setOnAction(event->{
-            MathApp.showMathSubjects();
+            System.out.println("To be updated.");
         });
 
         sixthGradeButton.setOnAction(event->{
-            MathApp.showMathSubjects();
+            System.out.println("To be updated.");
         });
 
         seventhGradeButton.setOnAction(event->{
-            MathApp.showMathSubjects();
+            System.out.println("To be updated.");
         });
 
         eithGradeButton.setOnAction(event->{
-            MathApp.showMathSubjects();
+            System.out.println("To be updated.");
         });
 
         ninthGradeButton.setOnAction(event->{
-            MathApp.showMathSubjects();
+            System.out.println("To be updated.");
         });
 
         tenthGradeButton.setOnAction(event->{
+            System.out.println("To be updated.");
+        });
+
+        back.setOnAction(event->{
             MathApp.showMathSubjects();
         });
 
 
         VBox root = new VBox(10);
-        //root.getChildren().addAll(usernameLabel, usernameField, passwordLabel, passwordField, loginButton, checkButton, resultLabel);
-
-        // Scene scene = new Scene(root, 300, 200);
-        // primaryStage.setScene(scene);
-        // primaryStage.setTitle("Login Account");
-        // primaryStage.show();
-
+        root.getChildren().addAll(fifthGradeLabel, fifthGradeButton, sixthGradeLabel, sixthGradeButton, seventhGradeLabel, seventhGradeButton, eigthGradeLabel, eithGradeButton, ninthGradeLabel, ninthGradeButton, tenthGradeLabel, tenthGradeButton, back, resultLabel);
 
         return root;
    }
