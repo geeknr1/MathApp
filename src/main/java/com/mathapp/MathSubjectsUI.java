@@ -9,13 +9,10 @@ import javafx.stage.Stage;
 public class MathSubjectsUI{
 
     private static Stage primaryStage;
-    // @Override
-    // public void start(Stage stage){
 
-    // }
+    public VBox getMathSubjectsUI(Stage stage){
 
-    public VBox getMathSubjectsUI(){
-
+        primaryStage = stage;
         Label AlgebraLabel = new Label("Algebra curriculum for 5th - 12th grade.");
         Label GeometryLabel = new Label("Geometry curriculum for 5th - 12th grade");
         Label MathematicalAnalysisLabel = new Label("Mathematical Analysis curriculum for 5th - 12th grade");

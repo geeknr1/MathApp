@@ -13,8 +13,6 @@ public class MathApp extends Application {
         primaryStage = stage;
         DataBase database = new DataBase();
         database.connect();
-        showDashBoard();
-        showMathSubjects();
         showLogIn();
         primaryStage.show();
         // Label label = new Label("Welcome to Math Learning Application");
@@ -36,7 +34,7 @@ public class MathApp extends Application {
         VBox dashboard = new VBox(10);
         MathSubjectsUI subjectsUI = new MathSubjectsUI();
         Label dashboardLabel = new Label("Welcome to fun math.");
-        dashboard.getChildren().addAll(dashboardLabel, subjectsUI.getMathSubjectsUI());
+        dashboard.getChildren().addAll(dashboardLabel, subjectsUI.getMathSubjectsUI(primaryStage));
         Scene dashboardScene = new Scene(dashboard, 800, 600);
         primaryStage.setScene(dashboardScene);    
     }
@@ -48,9 +46,9 @@ public class MathApp extends Application {
     }
 
     public static void showMathSubjects(){
-        MathSubjectsUI subjectsUI = new MathSubjectsUI();
-        Scene subjectsScene = new Scene(subjectsUI.getMathSubjectsUI(), 800, 600);
-        primaryStage.setScene(subjectsScene);
+        // MathSubjectsUI subjectsUI = new MathSubjectsUI();
+        // Scene subjectsScene = new Scene(subjectsUI.getMathSubjectsUI(primaryStage), 800, 600);
+        // primaryStage.setScene(subjectsScene);
     }
 
     public static void main(String[] args) {
