@@ -1,57 +1,40 @@
-package com.mathapp;
+package com.mathapp.ChaptersGeometryGrades;
 
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 
 public class Geometry7thChaptersUI{
 
     public VBox getGeometry7thChaptersUI(){
 
+        Label chapter1Label = new Label("Let's learn about 'Quadrilaterals'");
         Button chapter1Button = new Button("Quadrilaterals");
+        Label chapter2Label = new Label("Let's learn about 'Surfaces and perimeters'");
         Button chapter2Button = new Button("Surfaces and perimeters");
+        Label chapter3Label = new Label("Let's learn about the 'Similarity of triangles'");
         Button chapter3Button = new Button("Similarity of triangles");
-        Button chapter4Button = new Button("Metric relationships in right triangles");
+        Label chapter4Label = new Label("Let's learn about 'Metric relations in right triangles'");
+        Button chapter4Button = new Button("Metric relations in right triangles");
 
-        // fifthGradeButton.setOnAction(event->{
-        //     MathApp.showMathSubjects();
-        // });
+        chapter1Button.setOnAction(event->{
+            System.out.println("To be updated.");
+        });
 
-        // sixthGradeButton.setOnAction(event->{
-        //     MathApp.showMathSubjects();
-        // });
+        chapter2Button.setOnAction(event->{
+            System.out.println("To be updated.");
+        });
 
-        // seventhGradeButton.setOnAction(event->{
-        //     MathApp.showMathSubjects();
-        // });
+        chapter3Button.setOnAction(event->{
+            System.out.println("To be updated.");
+        });
 
-        // eithGradeButton.setOnAction(event->{
-        //     MathApp.showMathSubjects();
-        // });
-
-        // ninthGradeButton.setOnAction(event->{
-        //     MathApp.showMathSubjects();
-        // });
-
-        // tenthGradeButton.setOnAction(event->{
-        //     MathApp.showMathSubjects();
-        // });
-
-        // eleventhGradeButton.setOnAction(event->{
-        //     MathApp.showMathSubjects();
-        // });
-
-        // twelthGradeButton.setOnAction(event->{
-        //     MathApp.showMathSubjects();
-        // });
+        chapter4Button.setOnAction(event->{
+            System.out.println("To be updated.");
+        });
 
         VBox root = new VBox(10);
-        //root.getChildren().addAll(usernameLabel, usernameField, passwordLabel, passwordField, loginButton, checkButton, resultLabel);
-
-        // Scene scene = new Scene(root, 300, 200);
-        // primaryStage.setScene(scene);
-        // primaryStage.setTitle("Login Account");
-        // primaryStage.show();
-
+        root.getChildren().addAll(chapter1Label, chapter1Button, chapter2Label, chapter2Button, chapter3Label, chapter3Button, chapter4Label, chapter4Button);
 
         return root;
    }

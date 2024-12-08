@@ -1,58 +1,34 @@
-package com.mathapp;
+package com.mathapp.ChaptersAlgebraGrades;
 
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 
 public class Algebra12thChaptersUI{
 
     public VBox getAlgebra12thChaptersUI(){
 
+        Label chapter1Label = new Label("Let's learn about 'Groups'");
         Button chapter1Button = new Button("Groups");
+        Label chapter2Label = new Label("Let's learn about 'Rings + Bodies'");
         Button chapter2Button = new Button("Rings. Bodies");
+        Label chapter3Label = new Label("Let's learn about 'Rings of polynomials with coefficients in a commutative field'");
         Button chapter3Button = new Button("Rings of polynomials with coefficients in a commutative field");
         
+        chapter1Button.setOnAction(event->{
+            System.out.println("To be updated.");
+        });
 
+        chapter2Button.setOnAction(event->{
+            System.out.println("To be updated.");
+        });
 
-        // fifthGradeButton.setOnAction(event->{
-        //     MathApp.showMathSubjects();
-        // });
-
-        // sixthGradeButton.setOnAction(event->{
-        //     MathApp.showMathSubjects();
-        // });
-
-        // seventhGradeButton.setOnAction(event->{
-        //     MathApp.showMathSubjects();
-        // });
-
-        // eithGradeButton.setOnAction(event->{
-        //     MathApp.showMathSubjects();
-        // });
-
-        // ninthGradeButton.setOnAction(event->{
-        //     MathApp.showMathSubjects();
-        // });
-
-        // tenthGradeButton.setOnAction(event->{
-        //     MathApp.showMathSubjects();
-        // });
-
-        // eleventhGradeButton.setOnAction(event->{
-        //     MathApp.showMathSubjects();
-        // });
-
-        // twelthGradeButton.setOnAction(event->{
-        //     MathApp.showMathSubjects();
-        // });
+        chapter3Button.setOnAction(event->{
+            System.out.println("To be updated.");
+        });
 
         VBox root = new VBox(10);
-        //root.getChildren().addAll(usernameLabel, usernameField, passwordLabel, passwordField, loginButton, checkButton, resultLabel);
-
-        // Scene scene = new Scene(root, 300, 200);
-        // primaryStage.setScene(scene);
-        // primaryStage.setTitle("Login Account");
-        // primaryStage.show();
-
+        root.getChildren().addAll(chapter1Label, chapter1Button, chapter2Label, chapter2Button, chapter3Label, chapter3Button);
 
         return root;
    }

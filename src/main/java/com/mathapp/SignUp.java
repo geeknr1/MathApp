@@ -1,9 +1,7 @@
 package com.mathapp;
-
+import org.bson.Document;
 
 import com.mongodb.client.MongoCollection;
-
-import org.bson.Document;
 
 public class SignUp {
 

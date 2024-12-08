@@ -1,58 +1,41 @@
-package com.mathapp;
+package com.mathapp.ChaptersAlgebraGrades;
 
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 
 public class Algebra11thChaptersUI{
 
     public VBox getAlgebra11thChaptersUI(){
 
+        Label chapter1Label = new Label("Let's learn about 'Permutations'");
         Button chapter1Button = new Button("Permutation");
+        Label chapter2Label = new Label("Let's learn about the 'Matrix'");
         Button chapter2Button = new Button("Matrix");
+        Label chapter3Label = new Label("Let's learn about the 'Determinand of the matrix'");
         Button chapter3Button = new Button("Determinand");
+        Label chapter4Label = new Label("Let's learn about 'Systems of linear equations'");
         Button chapter4Button = new Button("Systems of linear equations");
 
-        // fifthGradeButton.setOnAction(event->{
-        //     MathApp.showMathSubjects();
-        // });
+        chapter1Button.setOnAction(event->{
+            System.out.println("To be updated.");
+        });
 
-        // sixthGradeButton.setOnAction(event->{
-        //     MathApp.showMathSubjects();
-        // });
+        chapter2Button.setOnAction(event->{
+            System.out.println("To be updated.");
+        });
 
-        // seventhGradeButton.setOnAction(event->{
-        //     MathApp.showMathSubjects();
-        // });
+        chapter3Button.setOnAction(event->{
+            System.out.println("To be updated.");
+        });
 
-        // eithGradeButton.setOnAction(event->{
-        //     MathApp.showMathSubjects();
-        // });
-
-        // ninthGradeButton.setOnAction(event->{
-        //     MathApp.showMathSubjects();
-        // });
-
-        // tenthGradeButton.setOnAction(event->{
-        //     MathApp.showMathSubjects();
-        // });
-
-        // eleventhGradeButton.setOnAction(event->{
-        //     MathApp.showMathSubjects();
-        // });
-
-        // twelthGradeButton.setOnAction(event->{
-        //     MathApp.showMathSubjects();
-        // });
+        chapter4Button.setOnAction(event->{
+            System.out.println("To be updated.");
+        });
 
         VBox root = new VBox(10);
-        //root.getChildren().addAll(usernameLabel, usernameField, passwordLabel, passwordField, loginButton, checkButton, resultLabel);
-
-        // Scene scene = new Scene(root, 300, 200);
-        // primaryStage.setScene(scene);
-        // primaryStage.setTitle("Login Account");
-        // primaryStage.show();
-
-
+        root.getChildren().addAll(chapter1Label, chapter1Button, chapter2Label, chapter2Button, chapter3Label, chapter3Button, chapter4Label, chapter4Button);
+        
         return root;
    }
 

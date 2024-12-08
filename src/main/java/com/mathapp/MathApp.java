@@ -1,5 +1,9 @@
 package com.mathapp;
 
+import com.mathapp.MostImportantUIs.LogInUI;
+import com.mathapp.MostImportantUIs.SignUpUI;
+import com.mathapp.MostImportantUIs.MathSubjectsUI;
+
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -27,6 +31,7 @@ public class MathApp extends Application {
     public static void showLogIn(){
         LogInUI loginUI = new LogInUI();
         Scene loginScene = new Scene(loginUI.getLoginUI(), 800, 600);
+        // loginScene.getStylesheets().add(SignUpUI.class.getResource("style.css").toExternalForm());
         primaryStage.setScene(loginScene);
     }
 
