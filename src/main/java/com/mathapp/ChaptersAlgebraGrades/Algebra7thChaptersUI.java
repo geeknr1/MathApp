@@ -1,5 +1,7 @@
 package com.mathapp.ChaptersAlgebraGrades;
 
+import com.mathapp.MathApp;
+
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
@@ -17,6 +19,8 @@ public class Algebra7thChaptersUI{
         Label chapter4Label = new Label("Let's learn about 'Data organization elements'");
         Button chapter4Button = new Button("Data organization elements");
 
+        Button back = new Button("Back");
+
         chapter1Button.setOnAction(event->{
             System.out.println("To be updated.");
         });
@@ -33,8 +37,12 @@ public class Algebra7thChaptersUI{
             System.out.println("To be updated.");
         });
 
+        back.setOnAction(event->{
+            MathApp.showAlgebraSubject();
+        });
+
         VBox root = new VBox(10);
-        root.getChildren().addAll(chapter1Label, chapter1Button, chapter2Label, chapter2Button, chapter3Label, chapter3Button, chapter4Label, chapter4Button);
+        root.getChildren().addAll(chapter1Label, chapter1Button, chapter2Label, chapter2Button, chapter3Label, chapter3Button, chapter4Label, chapter4Button, back);
 
         return root;
    }

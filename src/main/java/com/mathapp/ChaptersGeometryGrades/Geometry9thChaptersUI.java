@@ -3,6 +3,7 @@ package com.mathapp.ChaptersGeometryGrades;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
+import com.mathapp.MathApp;
 
 public class Geometry9thChaptersUI{
 
@@ -14,6 +15,8 @@ public class Geometry9thChaptersUI{
         Button chapter2Button = new Button("Elements of trigonometry");
         Label chapter3Label = new Label("Let's learn about the 'Applications of trigonometry in plane geometry'");
         Button chapter3Button = new Button("Applications of trigonometry in plane geometry");
+
+        Button back = new Button("Back");
 
         chapter1Button.setOnAction(event->{
             System.out.println("To be updated.");
@@ -27,8 +30,12 @@ public class Geometry9thChaptersUI{
             System.out.println("To be updated.");
         });
 
+        back.setOnAction(event->{
+            MathApp.showGeometrySubject();
+        });
+
         VBox root = new VBox(10);
-        root.getChildren().addAll(chapter1Label, chapter1Button, chapter2Label, chapter2Button, chapter3Label, chapter3Button);
+        root.getChildren().addAll(chapter1Label, chapter1Button, chapter2Label, chapter2Button, chapter3Label, chapter3Button, back);
 
         return root;
    }

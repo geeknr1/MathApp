@@ -33,7 +33,7 @@ public class MathSubjectsUI{
             VBox algebra = new VBox(10);
             SubjectAlgebraUI algebraUI = new SubjectAlgebraUI();
             Label algebraLabel = new Label("Welcome to algebra ");
-            algebra.getChildren().addAll(algebraLabel, algebraUI.getAlgebraChaptersUI());
+            algebra.getChildren().addAll(algebraLabel, algebraUI.getAlgebraChaptersUI(primaryStage));
             Scene algebraScene = new Scene(algebra, 600, 800);
             primaryStage.setScene(algebraScene);
 
@@ -43,7 +43,7 @@ public class MathSubjectsUI{
             VBox geometry = new VBox(10);
             SubjectGeometryUI geometryUI = new SubjectGeometryUI();
             Label geometryLabel = new Label("Welcome to geometry.");
-            geometry.getChildren().addAll(geometryLabel, geometryUI.getGeometrySubjectUI());
+            geometry.getChildren().addAll(geometryLabel, geometryUI.getGeometrySubjectUI(primaryStage));
             Scene geometryScene = new Scene(geometry, 600, 800);
             primaryStage.setScene(geometryScene);
         });
@@ -52,7 +52,7 @@ public class MathSubjectsUI{
             VBox mathematicalAnalysis = new VBox(10);
             SubjectMathAnalysisUI mathAnalysisUI = new SubjectMathAnalysisUI();
             Label mathAnalysisLabel = new Label("Welcome to Mathematical Analysis.");
-            mathematicalAnalysis.getChildren().addAll(mathAnalysisLabel, mathAnalysisUI.getMathAnalysisSubjectUI());
+            mathematicalAnalysis.getChildren().addAll(mathAnalysisLabel, mathAnalysisUI.getMathAnalysisSubjectUI(primaryStage));
             Scene mathAnalysisScene = new Scene(mathematicalAnalysis, 600, 800);
             primaryStage.setScene(mathAnalysisScene);
         });

@@ -1,6 +1,6 @@
 package com.mathapp.ChaptersAlgebraGrades;
 
-//import com.mathapp.MathApp;
+import com.mathapp.MathApp;
 
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -32,6 +32,8 @@ public class Algebra5thChaptersUI{
         Button chapter10Button = new Button("Arithmetic methods for solving problems with fractions in which units of measure also intervene");
         Label chapter11Label = new Label("Let's learn about 'Data organization problems'");
         Button chapter11Button = new Button("Data organization problems.");
+
+        Button back = new Button("Back");
 
 
         chapter1Button.setOnAction(event->{
@@ -78,9 +80,13 @@ public class Algebra5thChaptersUI{
             System.out.println("To be updated.");
         });
 
+        back.setOnAction(event->{
+            MathApp.showAlgebraSubject();
+        });
+
 
         VBox root = new VBox(10);
-        root.getChildren().addAll(chapter1Label, chapter1Button, chapter2Label, chapter2Button, chapter3Label, chapter3Button, chapter4Label, chapter4Button, chapter5Label, chapter5Button, chapter6Label, chapter6Button, chapter7Label, chapter7Button, chapter8Label, chapter8Button, chapter9Label, chapter9Button, chapter10Label, chapter10Button, chapter11Label, chapter11Button);
+        root.getChildren().addAll(chapter1Label, chapter1Button, chapter2Label, chapter2Button, chapter3Label, chapter3Button, chapter4Label, chapter4Button, chapter5Label, chapter5Button, chapter6Label, chapter6Button, chapter7Label, chapter7Button, chapter8Label, chapter8Button, chapter9Label, chapter9Button, chapter10Label, chapter10Button, chapter11Label, chapter11Button, back);
 
         return root;
    }

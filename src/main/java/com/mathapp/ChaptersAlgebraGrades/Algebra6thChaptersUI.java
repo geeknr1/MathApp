@@ -1,9 +1,10 @@
 package com.mathapp.ChaptersAlgebraGrades;
 
+import com.mathapp.MathApp;
+
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
-
 public class Algebra6thChaptersUI{
 
     public VBox getAlgebra6thChaptersUI(){
@@ -22,6 +23,8 @@ public class Algebra6thChaptersUI{
         Button chapter6Button = new Button("Integers");
         Label chapter7Label = new Label("Let's learn about 'Rational numbers'");
         Button chapter7Button = new Button("Rational numbers");
+
+        Button back = new Button("Back");
 
 
         chapter1Button.setOnAction(event->{
@@ -52,8 +55,12 @@ public class Algebra6thChaptersUI{
             System.out.println("To be updated.");
         });
 
+        back.setOnAction(event->{
+            MathApp.showAlgebraSubject();
+        });
+
         VBox root = new VBox(10);
-        root.getChildren().addAll(chapter1Label, chapter1Button, chapter2Label, chapter2Button, chapter3Label, chapter3Button, chapter4Label, chapter4Button, chapter5Label, chapter5Button, chapter6Label, chapter6Button, chapter7Label, chapter7Button);
+        root.getChildren().addAll(chapter1Label, chapter1Button, chapter2Label, chapter2Button, chapter3Label, chapter3Button, chapter4Label, chapter4Button, chapter5Label, chapter5Button, chapter6Label, chapter6Button, chapter7Label, chapter7Button, back);
 
         return root;
    }

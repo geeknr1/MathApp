@@ -1,5 +1,7 @@
 package com.mathapp.ChaptersAlgebraGrades;
 
+import com.mathapp.MathApp;
+
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
@@ -14,6 +16,8 @@ public class Algebra8thChaptersUI{
         Button chapter2Button = new Button("Algebraic calculation");
         Label chapter3Label = new Label("Let's learn about 'Functions + Data organization and probabilities'");
         Button chapter3Button = new Button("Functions. Data organization and probabilities.");
+
+        Button back = new Button("Back");
         
         chapter1Button.setOnAction(event->{
             System.out.println("To be updated.");
@@ -27,8 +31,12 @@ public class Algebra8thChaptersUI{
            System.out.println("To be updated.");
         });
 
+        back.setOnAction(event->{
+            MathApp.showAlgebraSubject();
+        });
+
         VBox root = new VBox(10);
-        root.getChildren().addAll(chapter1Label, chapter1Button, chapter2Label, chapter2Button, chapter3Label, chapter3Button);
+        root.getChildren().addAll(chapter1Label, chapter1Button, chapter2Label, chapter2Button, chapter3Label, chapter3Button, back);
 
         return root;
    }

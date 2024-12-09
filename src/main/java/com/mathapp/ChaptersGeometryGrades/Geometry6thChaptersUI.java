@@ -1,5 +1,7 @@
 package com.mathapp.ChaptersGeometryGrades;
 
+import com.mathapp.MathApp;
+
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
@@ -24,6 +26,8 @@ public class Geometry6thChaptersUI{
         Button chapter7Button = new Button("Congruence of triangles");
         Label chapter8Label = new Label("Let's learn about the 'Properties of triangles'");
         Button chapter8Button = new Button("Properties of triangles");
+
+        Button back = new Button("Back");
 
 
         chapter1Button.setOnAction(event->{
@@ -58,10 +62,13 @@ public class Geometry6thChaptersUI{
             System.out.println("To be updated.");
         });
 
+        back.setOnAction(event->{
+            MathApp.showGeometrySubject();
+        });
+
         VBox root = new VBox(10);
-        root.getChildren().addAll(chapter1Label, chapter1Button, chapter2Label, chapter2Button, chapter3Label, chapter3Button, chapter4Label, chapter4Button, chapter5Label, chapter5Button, chapter6Label, chapter6Button, chapter7Label, chapter7Button, chapter8Label, chapter8Button);
+        root.getChildren().addAll(chapter1Label, chapter1Button, chapter2Label, chapter2Button, chapter3Label, chapter3Button, chapter4Label, chapter4Button, chapter5Label, chapter5Button, chapter6Label, chapter6Button, chapter7Label, chapter7Button, chapter8Label, chapter8Button, back);
 
         return root;
    }
-
 }

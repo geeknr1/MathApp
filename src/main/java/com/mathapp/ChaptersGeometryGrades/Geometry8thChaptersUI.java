@@ -3,6 +3,7 @@ package com.mathapp.ChaptersGeometryGrades;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
+import com.mathapp.MathApp;
 
 public class Geometry8thChaptersUI{
 
@@ -24,6 +25,8 @@ public class Geometry8thChaptersUI{
         Button chapter7Button = new Button("Calculating areas and volumes for polyhedra");
         Label chapter8Label = new Label("Let's learn about 'Formulas'");
         Button chapter8Button = new Button("Formulas");
+
+        Button back = new Button("Back");
 
         chapter1Button.setOnAction(event->{
            System.out.println("To be updated.");
@@ -57,8 +60,12 @@ public class Geometry8thChaptersUI{
             System.out.println("To be updated.");
         });
 
+        back.setOnAction(event->{
+            MathApp.showGeometrySubject();
+        });
+
         VBox root = new VBox(10);
-        root.getChildren().addAll(chapter1Label, chapter1Button, chapter2Label, chapter2Button, chapter3Label, chapter3Button, chapter4Label, chapter4Button, chapter5Label, chapter5Button, chapter6Label, chapter6Button, chapter7Label, chapter7Button, chapter8Label, chapter8Button);
+        root.getChildren().addAll(chapter1Label, chapter1Button, chapter2Label, chapter2Button, chapter3Label, chapter3Button, chapter4Label, chapter4Button, chapter5Label, chapter5Button, chapter6Label, chapter6Button, chapter7Label, chapter7Button, chapter8Label, chapter8Button, back);
 
         return root;
    }

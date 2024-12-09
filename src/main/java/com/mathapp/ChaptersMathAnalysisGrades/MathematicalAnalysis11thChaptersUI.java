@@ -1,5 +1,7 @@
 package com.mathapp.ChaptersMathAnalysisGrades;
 
+import com.mathapp.MathApp;
+
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
@@ -16,6 +18,8 @@ public class MathematicalAnalysis11thChaptersUI{
         Button chapter3Button = new Button("Continuous functions");
         Label chapter4Label = new Label("Let's learn about 'Derivable functions'");
         Button chapter4Button = new Button("Derivable functions");
+
+        Button back = new Button("Back");
         
         chapter1Button.setOnAction(event->{
             System.out.println("To be updated.");
@@ -33,8 +37,12 @@ public class MathematicalAnalysis11thChaptersUI{
             System.out.println("To be updated.");
         });
 
+        back.setOnAction(event->{
+            MathApp.showMathematicalAnalysisSubject();
+        });
+
         VBox root = new VBox(10);
-        root.getChildren().addAll(chapter1Label, chapter1Button, chapter2Label, chapter2Button, chapter3Label, chapter3Button, chapter4Label, chapter4Button);
+        root.getChildren().addAll(chapter1Label, chapter1Button, chapter2Label, chapter2Button, chapter3Label, chapter3Button, chapter4Label, chapter4Button, back);
 
         return root;
    }

@@ -1,9 +1,10 @@
 package com.mathapp.ChaptersAlgebraGrades;
 
+import com.mathapp.MathApp;
+
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
-
 public class Algebra11thChaptersUI{
 
     public VBox getAlgebra11thChaptersUI(){
@@ -16,6 +17,8 @@ public class Algebra11thChaptersUI{
         Button chapter3Button = new Button("Determinand");
         Label chapter4Label = new Label("Let's learn about 'Systems of linear equations'");
         Button chapter4Button = new Button("Systems of linear equations");
+
+        Button back = new Button("Back");
 
         chapter1Button.setOnAction(event->{
             System.out.println("To be updated.");
@@ -33,8 +36,12 @@ public class Algebra11thChaptersUI{
             System.out.println("To be updated.");
         });
 
+        back.setOnAction(event->{
+            MathApp.showAlgebraSubject();
+        });
+
         VBox root = new VBox(10);
-        root.getChildren().addAll(chapter1Label, chapter1Button, chapter2Label, chapter2Button, chapter3Label, chapter3Button, chapter4Label, chapter4Button);
+        root.getChildren().addAll(chapter1Label, chapter1Button, chapter2Label, chapter2Button, chapter3Label, chapter3Button, chapter4Label, chapter4Button, back);
         
         return root;
    }

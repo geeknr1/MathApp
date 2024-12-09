@@ -1,9 +1,10 @@
 package com.mathapp.ChaptersAlgebraGrades;
 
+import com.mathapp.MathApp;
+
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
-
 public class Algebra10thChaptersUI{
 
     public VBox getAlgebra10thChaptersUI(){
@@ -20,6 +21,8 @@ public class Algebra10thChaptersUI{
         Button chapter5Button = new Button("Combinatorics. Counting methods. Probabilities.");
         Label chapter6Label = new Label("Let's learn about 'Financial mathematics'");
         Button chapter6Button = new Button("Financial mathematics");
+
+        Button back = new Button("Back");
 
         chapter1Button.setOnAction(event->{
             System.out.println("To be updated.");
@@ -45,8 +48,12 @@ public class Algebra10thChaptersUI{
            System.out.println("To be updated.");
         });
 
+        back.setOnAction(event->{
+            MathApp.showAlgebraSubject();
+        });
+
         VBox root = new VBox(10);
-        root.getChildren().addAll(chapter1Label, chapter1Button, chapter2Label, chapter2Button, chapter3Label, chapter3Button, chapter4Label, chapter4Button, chapter5Label, chapter5Button, chapter6Label, chapter6Button);
+        root.getChildren().addAll(chapter1Label, chapter1Button, chapter2Label, chapter2Button, chapter3Label, chapter3Button, chapter4Label, chapter4Button, chapter5Label, chapter5Button, chapter6Label, chapter6Button, back);
 
         return root;
    }

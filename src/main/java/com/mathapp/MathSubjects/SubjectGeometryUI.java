@@ -1,14 +1,26 @@
 package com.mathapp.MathSubjects;
 
+import com.mathapp.ChaptersGeometryGrades.Geometry10thChaptersUI;
+import com.mathapp.ChaptersGeometryGrades.Geometry5thChaptersUI;
+import com.mathapp.ChaptersGeometryGrades.Geometry6thChaptersUI;
+import com.mathapp.ChaptersGeometryGrades.Geometry7thChaptersUI;
+import com.mathapp.ChaptersGeometryGrades.Geometry8thChaptersUI;
+import com.mathapp.ChaptersGeometryGrades.Geometry9thChaptersUI;
 import com.mathapp.MathApp;
 
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
 public class SubjectGeometryUI{
 
-    public VBox getGeometrySubjectUI(){
+    private static Stage primaryStage;
+
+    public VBox getGeometrySubjectUI(Stage stage){
+
+        primaryStage = stage;
 
         Label fifthGradeLabel = new Label("Geometry chapters for the 5th grade");
         Button fifthGradeButton = new Button("5th grade");
@@ -28,27 +40,57 @@ public class SubjectGeometryUI{
         Button back = new Button("Back");
 
         fifthGradeButton.setOnAction(event->{
-            System.out.println("To be updated.");
+            VBox fifthGrade = new VBox(10);
+            Geometry5thChaptersUI fifthGradeUI = new Geometry5thChaptersUI();
+            Label fiveGradeLabel = new Label("Welcome to the 5th grade in Geometry!");
+            fifthGrade.getChildren().addAll(fiveGradeLabel, fifthGradeUI.getGeometry5thChaptersUI());
+            Scene fifthGradeScene = new Scene(fifthGrade, 600, 800);
+            primaryStage.setScene(fifthGradeScene);
         });
 
         sixthGradeButton.setOnAction(event->{
-            System.out.println("To be updated.");
+            VBox sixthGrade = new VBox(10);
+            Geometry6thChaptersUI sixthGradeUI = new Geometry6thChaptersUI();
+            Label sixGradeLabel = new Label("Welcome to 6th grade in Geometry!");
+            sixthGrade.getChildren().addAll(sixGradeLabel, sixthGradeUI.getGeometry6thChaptersUI());
+            Scene sixthGradeScene = new Scene(sixGradeLabel, 600, 800);
+            primaryStage.setScene(sixthGradeScene);
         });
 
         seventhGradeButton.setOnAction(event->{
-            System.out.println("To be updated.");
+            VBox seventhGrade = new VBox(10);
+            Geometry7thChaptersUI seventhGradeUI = new Geometry7thChaptersUI();
+            Label sevenGradeLabel = new Label("Welcome to 7th grade in Geometry!");
+            seventhGrade.getChildren().addAll(sevenGradeLabel, seventhGradeUI.getGeometry7thChaptersUI());
+            Scene seventhGradeScene = new Scene(sevenGradeLabel, 600, 800);
+            primaryStage.setScene(seventhGradeScene);
         });
 
         eithGradeButton.setOnAction(event->{
-            System.out.println("To be updated.");
+            VBox eithGrade = new VBox(10);
+            Geometry8thChaptersUI eithGradeUI = new Geometry8thChaptersUI();
+            Label eightGradeLabel = new Label("Welcome to 8th grade in Geometry!");
+            eithGrade.getChildren().addAll(eightGradeLabel, eithGradeUI.getGeometry8thChaptersUI());
+            Scene eithGradeScene = new Scene(eightGradeLabel, 600, 800);
+            primaryStage.setScene(eithGradeScene);
         });
 
         ninthGradeButton.setOnAction(event->{
-            System.out.println("To be updated.");
+            VBox ninthGrade = new VBox(10);
+            Geometry9thChaptersUI ninthGradeUI = new Geometry9thChaptersUI();
+            Label nineGradeLabel = new Label("Welcome to 9th grade in Geometry!");
+            ninthGrade.getChildren().addAll(nineGradeLabel, ninthGradeUI.getGeometry9thChaptersUI());
+            Scene ninthGradeScene = new Scene(nineGradeLabel, 600, 800);
+            primaryStage.setScene(ninthGradeScene);
         });
 
         tenthGradeButton.setOnAction(event->{
-            System.out.println("To be updated.");
+            VBox tenthGrade = new VBox(10);
+            Geometry10thChaptersUI tenthGradeUI = new Geometry10thChaptersUI();
+            Label tenGradeLabel = new Label("Welcome to 10th grade in Geometry!");
+            tenthGrade.getChildren().addAll(tenGradeLabel, tenthGradeUI.getGeometry10thChaptersUI());
+            Scene tenthGradeScene = new Scene(tenGradeLabel, 600, 800);
+            primaryStage.setScene(tenthGradeScene);
         });
 
         back.setOnAction(event->{

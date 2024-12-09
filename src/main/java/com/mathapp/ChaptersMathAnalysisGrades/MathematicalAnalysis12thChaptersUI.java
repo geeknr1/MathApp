@@ -1,5 +1,7 @@
 package com.mathapp.ChaptersMathAnalysisGrades;
 
+import com.mathapp.MathApp;
+
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
@@ -13,7 +15,9 @@ public class MathematicalAnalysis12thChaptersUI{
         Label chapter2Label = new Label("Let's learn about 'Integrable functions' + 'Definite integral of a function'");
         Button chapter2Button = new Button("Integrable functions. Definite integral of a function");
         Label chapter3Label = new Label("Let's look at some 'Applications of the definite integral'");
-        Button chapter3Button = new Button("Applications of the definite integral");        
+        Button chapter3Button = new Button("Applications of the definite integral"); 
+
+        Button back = new Button("Back");       
 
         chapter1Button.setOnAction(event->{
             System.out.println("To be updated.");
@@ -27,8 +31,12 @@ public class MathematicalAnalysis12thChaptersUI{
             System.out.println("To be updated.");
         });
 
+        back.setOnAction(event->{
+            MathApp.showMathematicalAnalysisSubject();
+        });
+
         VBox root = new VBox(10);
-        root.getChildren().addAll(chapter1Label, chapter1Button, chapter2Label, chapter2Button, chapter3Label, chapter3Button);
+        root.getChildren().addAll(chapter1Label, chapter1Button, chapter2Label, chapter2Button, chapter3Label, chapter3Button, back);
 
         return root;
    }

@@ -1,8 +1,11 @@
 package com.mathapp;
 
+import com.mathapp.MathSubjects.SubjectAlgebraUI;
+import com.mathapp.MathSubjects.SubjectGeometryUI;
+import com.mathapp.MathSubjects.SubjectMathAnalysisUI;
 import com.mathapp.MostImportantUIs.LogInUI;
-import com.mathapp.MostImportantUIs.SignUpUI;
 import com.mathapp.MostImportantUIs.MathSubjectsUI;
+import com.mathapp.MostImportantUIs.SignUpUI;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -54,6 +57,24 @@ public class MathApp extends Application {
         MathSubjectsUI subjectsUI = new MathSubjectsUI();
         Scene subjectsScene = new Scene(subjectsUI.getMathSubjectsUI(primaryStage), 800, 600);
         primaryStage.setScene(subjectsScene);
+    }
+
+    public static void showAlgebraSubject(){
+        SubjectAlgebraUI subjectsAlgebraUI = new SubjectAlgebraUI();
+        Scene subjectsAlgebraScene = new Scene(subjectsAlgebraUI.getAlgebraChaptersUI(primaryStage), 800, 600);
+        primaryStage.setScene(subjectsAlgebraScene);
+    }
+
+    public static void showGeometrySubject(){
+        SubjectGeometryUI subjectsGeometryUI = new SubjectGeometryUI();
+        Scene subjectsGeometryScene = new Scene(subjectsGeometryUI.getGeometrySubjectUI(primaryStage), 800, 600);
+        primaryStage.setScene(subjectsGeometryScene);
+    }
+
+    public static void showMathematicalAnalysisSubject(){
+        SubjectMathAnalysisUI subjectsMathAnalysisUI = new SubjectMathAnalysisUI();
+        Scene subjectsMathAnalysisScene = new Scene(subjectsMathAnalysisUI.getMathAnalysisSubjectUI(primaryStage), 800, 600);
+        primaryStage.setScene(subjectsMathAnalysisScene); 
     }
 
     public static void main(String[] args) {
