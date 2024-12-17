@@ -24,6 +24,7 @@ public class SubjectAlgebraUI{
 
         primaryStage = stage;
 
+
         Label fifthGradeLabel = new Label("Algebra chapters for the 5th grade");
         Button fifthGradeButton = new Button("5th grade");
         Label sixthGradeLabel = new Label("Algebra chapters for the 6th grade");
@@ -59,7 +60,7 @@ public class SubjectAlgebraUI{
             Algebra6thChaptersUI sixthGradeUI = new Algebra6thChaptersUI();
             Label sixGradeLabel = new Label("Welcome to 6th grade in Algebra!");
             sixthGrade.getChildren().addAll(sixGradeLabel, sixthGradeUI.getAlgebra6thChaptersUI());
-            Scene sixthGradeScene = new Scene(sixGradeLabel, 600, 800);
+            Scene sixthGradeScene = new Scene(sixthGrade, 600, 800);
             primaryStage.setScene(sixthGradeScene);
         });
 
@@ -68,7 +69,7 @@ public class SubjectAlgebraUI{
             Algebra7thChaptersUI seventhGradeUI = new Algebra7thChaptersUI();
             Label sevenGradeLabel = new Label("Welcome to 7th grade in Algebra!");
             seventhGrade.getChildren().addAll(sevenGradeLabel, seventhGradeUI.getAlgebra7thChaptersUI());
-            Scene seventhGradeScene = new Scene(sevenGradeLabel, 600, 800);
+            Scene seventhGradeScene = new Scene(seventhGrade, 600, 800);
             primaryStage.setScene(seventhGradeScene);
         });
 
@@ -77,7 +78,7 @@ public class SubjectAlgebraUI{
             Algebra8thChaptersUI eithGradeUI = new Algebra8thChaptersUI();
             Label eightGradeLabel = new Label("Welcome to 8th grade in Algebra!");
             eithGrade.getChildren().addAll(eightGradeLabel, eithGradeUI.getAlgebra8thChaptersUI());
-            Scene eithGradeScene = new Scene(eightGradeLabel, 600, 800);
+            Scene eithGradeScene = new Scene(eithGrade, 600, 800);
             primaryStage.setScene(eithGradeScene);
         });
 
@@ -86,7 +87,7 @@ public class SubjectAlgebraUI{
             Algebra9thChaptersUI ninthGradeUI = new Algebra9thChaptersUI();
             Label nineGradeLabel = new Label("Welcome to 9th grade in Algebra!");
             ninthGrade.getChildren().addAll(nineGradeLabel, ninthGradeUI.getAlgebra9thChaptersUI());
-            Scene ninthGradeScene = new Scene(nineGradeLabel, 600, 800);
+            Scene ninthGradeScene = new Scene(ninthGrade, 600, 800);
             primaryStage.setScene(ninthGradeScene);
         });
 
@@ -95,7 +96,7 @@ public class SubjectAlgebraUI{
             Algebra10thChaptersUI tenthGradeUI = new Algebra10thChaptersUI();
             Label tenGradeLabel = new Label("Welcome to 10th grade in Algebra!");
             tenthGrade.getChildren().addAll(tenGradeLabel, tenthGradeUI.getAlgebra10thChaptersUI());
-            Scene tenthGradeScene = new Scene(tenGradeLabel, 600, 800);
+            Scene tenthGradeScene = new Scene(tenthGrade, 600, 800);
             primaryStage.setScene(tenthGradeScene);
         });
 
@@ -104,7 +105,7 @@ public class SubjectAlgebraUI{
             Algebra11thChaptersUI eleventhGradeUI = new Algebra11thChaptersUI();
             Label elevenGradeLabel = new Label("Welcome to 11th grade in Algebra!");
             eleventhGrade.getChildren().addAll(elevenGradeLabel, eleventhGradeUI.getAlgebra11thChaptersUI());
-            Scene eleventhGradeScene = new Scene(elevenGradeLabel, 600, 800);
+            Scene eleventhGradeScene = new Scene(eleventhGrade, 600, 800);
             primaryStage.setScene(eleventhGradeScene);
         });
 
@@ -113,7 +114,7 @@ public class SubjectAlgebraUI{
             Algebra12thChaptersUI twelthGradeUI = new Algebra12thChaptersUI();
             Label twelveGradeLabel = new Label("Welcome to 8th grade in Algebra!");
             twelthGrade.getChildren().addAll(twelveGradeLabel, twelthGradeUI.getAlgebra12thChaptersUI());
-            Scene twelthGradeScene = new Scene(twelveGradeLabel, 600, 800);
+            Scene twelthGradeScene = new Scene(twelthGrade, 600, 800);
             primaryStage.setScene(twelthGradeScene);
         });
 

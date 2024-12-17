@@ -21,19 +21,19 @@ public class Algebra11thChaptersUI{
         Button back = new Button("Back");
 
         chapter1Button.setOnAction(event->{
-            System.out.println("To be updated.");
+            MathApp.showToBeContinued();
         });
 
         chapter2Button.setOnAction(event->{
-            System.out.println("To be updated.");
+            MathApp.showToBeContinued();
         });
 
         chapter3Button.setOnAction(event->{
-            System.out.println("To be updated.");
+            MathApp.showToBeContinued();
         });
 
         chapter4Button.setOnAction(event->{
-            System.out.println("To be updated.");
+            MathApp.showToBeContinued();
         });
 
         back.setOnAction(event->{

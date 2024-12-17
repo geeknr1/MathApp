@@ -29,35 +29,35 @@ public class Geometry8thChaptersUI{
         Button back = new Button("Back");
 
         chapter1Button.setOnAction(event->{
-           System.out.println("To be updated.");
+           MathApp.showToBeContinued();
         });
 
         chapter2Button.setOnAction(event->{
-            System.out.println("To be updated.");
+            MathApp.showToBeContinued();
         });
 
         chapter3Button.setOnAction(event->{
-            System.out.println("To be updated.");
+            MathApp.showToBeContinued();
         });
 
         chapter4Button.setOnAction(event->{
-            System.out.println("To be updated.");
+            MathApp.showToBeContinued();
         });
 
         chapter5Button.setOnAction(event->{
-            System.out.println("To be updated.");
+            MathApp.showToBeContinued();
         });
 
         chapter6Button.setOnAction(event->{
-            System.out.println("To be updated.");
+            MathApp.showToBeContinued();
         });
 
         chapter7Button.setOnAction(event->{
-           System.out.println("To be updated.");
+           MathApp.showToBeContinued();
         });
 
         chapter8Button.setOnAction(event->{
-            System.out.println("To be updated.");
+            MathApp.showToBeContinued();
         });
 
         back.setOnAction(event->{

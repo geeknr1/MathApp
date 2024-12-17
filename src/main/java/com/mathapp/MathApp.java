@@ -12,6 +12,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import javafx.scene.control.Button;
 
 public class MathApp extends Application {
     private static Stage primaryStage;
@@ -22,19 +23,11 @@ public class MathApp extends Application {
         database.connect();
         showLogIn();
         primaryStage.show();
-        // Label label = new Label("Welcome to Math Learning Application");
-        // StackPane root = new StackPane();
-        // root.getChildren().add(label);
-        // Scene scene = new Scene(root, 800, 600);
-        // primaryStage.setTitle("Math Learning Application");
-        // primaryStage.setScene(scene);
-        // primaryStage.show();
     }
 
     public static void showLogIn(){
         LogInUI loginUI = new LogInUI();
-        Scene loginScene = new Scene(loginUI.getLoginUI(), 800, 600);
-        // loginScene.getStylesheets().add(SignUpUI.class.getResource("style.css").toExternalForm());
+        Scene loginScene = loginUI.getLoginUI();
         primaryStage.setScene(loginScene);
     }
 
@@ -49,7 +42,7 @@ public class MathApp extends Application {
 
     public static void showSignUp(){
         SignUpUI signupUI = new SignUpUI();
-        Scene signupScene = new Scene(signupUI.getSignUpUI(), 800, 600);
+        Scene signupScene = signupUI.getSignUpUI();
         primaryStage.setScene(signupScene);
     }
 
@@ -75,6 +68,19 @@ public class MathApp extends Application {
         SubjectMathAnalysisUI subjectsMathAnalysisUI = new SubjectMathAnalysisUI();
         Scene subjectsMathAnalysisScene = new Scene(subjectsMathAnalysisUI.getMathAnalysisSubjectUI(primaryStage), 800, 600);
         primaryStage.setScene(subjectsMathAnalysisScene); 
+    }
+
+    public static void showToBeContinued(){
+        VBox futureUI = new VBox(10);
+        Label update = new Label("To be continued.");
+        Button back = new Button("Back");
+        back.setOnAction(event->{
+            MathApp.showAlgebraSubject();
+        });
+        futureUI.getChildren().addAll(update, back);
+
+        Scene toBeContinued = new Scene(futureUI, 800, 600);
+        primaryStage.setScene(toBeContinued);
     }
 
     public static void main(String[] args) {

@@ -4,10 +4,10 @@ import com.mathapp.ChaptersMathAnalysisGrades.MathematicalAnalysis11thChaptersUI
 import com.mathapp.ChaptersMathAnalysisGrades.MathematicalAnalysis12thChaptersUI;
 import com.mathapp.MathApp;
 
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class SubjectMathAnalysisUI{
@@ -32,7 +32,7 @@ public class SubjectMathAnalysisUI{
             MathematicalAnalysis11thChaptersUI eleventhGradeUI = new MathematicalAnalysis11thChaptersUI();
             Label elevenGradeLabel = new Label("Welcome to 11th grade in Mathematical Analysis!");
             eleventhGrade.getChildren().addAll(elevenGradeLabel, eleventhGradeUI.getMathematicalAnalysis11thChaptersUI());
-            Scene eleventhGradeScene = new Scene(elevenGradeLabel, 600, 800);
+            Scene eleventhGradeScene = new Scene(eleventhGrade, 600, 800);
             primaryStage.setScene(eleventhGradeScene);
         });
 
@@ -41,7 +41,7 @@ public class SubjectMathAnalysisUI{
             MathematicalAnalysis12thChaptersUI twelthGradeUI = new MathematicalAnalysis12thChaptersUI();
             Label twelveGradeLabel = new Label("Welcome to 8th grade in Mathematical Analysis!");
             twelthGrade.getChildren().addAll(twelveGradeLabel, twelthGradeUI.getMathematicalAnalysis12thChaptersUI());
-            Scene twelthGradeScene = new Scene(twelveGradeLabel, 600, 800);
+            Scene twelthGradeScene = new Scene(twelthGrade, 600, 800);
             primaryStage.setScene(twelthGradeScene);
         });
 

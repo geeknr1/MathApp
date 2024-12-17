@@ -8,10 +8,10 @@ import com.mathapp.ChaptersGeometryGrades.Geometry8thChaptersUI;
 import com.mathapp.ChaptersGeometryGrades.Geometry9thChaptersUI;
 import com.mathapp.MathApp;
 
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class SubjectGeometryUI{
@@ -53,7 +53,7 @@ public class SubjectGeometryUI{
             Geometry6thChaptersUI sixthGradeUI = new Geometry6thChaptersUI();
             Label sixGradeLabel = new Label("Welcome to 6th grade in Geometry!");
             sixthGrade.getChildren().addAll(sixGradeLabel, sixthGradeUI.getGeometry6thChaptersUI());
-            Scene sixthGradeScene = new Scene(sixGradeLabel, 600, 800);
+            Scene sixthGradeScene = new Scene(sixthGrade, 600, 800);
             primaryStage.setScene(sixthGradeScene);
         });
 
@@ -62,7 +62,7 @@ public class SubjectGeometryUI{
             Geometry7thChaptersUI seventhGradeUI = new Geometry7thChaptersUI();
             Label sevenGradeLabel = new Label("Welcome to 7th grade in Geometry!");
             seventhGrade.getChildren().addAll(sevenGradeLabel, seventhGradeUI.getGeometry7thChaptersUI());
-            Scene seventhGradeScene = new Scene(sevenGradeLabel, 600, 800);
+            Scene seventhGradeScene = new Scene(seventhGrade, 600, 800);
             primaryStage.setScene(seventhGradeScene);
         });
 
@@ -71,7 +71,7 @@ public class SubjectGeometryUI{
             Geometry8thChaptersUI eithGradeUI = new Geometry8thChaptersUI();
             Label eightGradeLabel = new Label("Welcome to 8th grade in Geometry!");
             eithGrade.getChildren().addAll(eightGradeLabel, eithGradeUI.getGeometry8thChaptersUI());
-            Scene eithGradeScene = new Scene(eightGradeLabel, 600, 800);
+            Scene eithGradeScene = new Scene(eithGrade, 600, 800);
             primaryStage.setScene(eithGradeScene);
         });
 
@@ -80,7 +80,7 @@ public class SubjectGeometryUI{
             Geometry9thChaptersUI ninthGradeUI = new Geometry9thChaptersUI();
             Label nineGradeLabel = new Label("Welcome to 9th grade in Geometry!");
             ninthGrade.getChildren().addAll(nineGradeLabel, ninthGradeUI.getGeometry9thChaptersUI());
-            Scene ninthGradeScene = new Scene(nineGradeLabel, 600, 800);
+            Scene ninthGradeScene = new Scene(ninthGrade, 600, 800);
             primaryStage.setScene(ninthGradeScene);
         });
 
@@ -89,7 +89,7 @@ public class SubjectGeometryUI{
             Geometry10thChaptersUI tenthGradeUI = new Geometry10thChaptersUI();
             Label tenGradeLabel = new Label("Welcome to 10th grade in Geometry!");
             tenthGrade.getChildren().addAll(tenGradeLabel, tenthGradeUI.getGeometry10thChaptersUI());
-            Scene tenthGradeScene = new Scene(tenGradeLabel, 600, 800);
+            Scene tenthGradeScene = new Scene(tenthGrade, 600, 800);
             primaryStage.setScene(tenthGradeScene);
         });
 
