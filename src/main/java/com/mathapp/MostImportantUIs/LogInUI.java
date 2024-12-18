@@ -3,14 +3,23 @@ package com.mathapp.MostImportantUIs;
 import com.mathapp.LogIn;
 import com.mathapp.MathApp;
 
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
-import javafx.scene.Scene;
+
+/**
+ * Clasa aceasta arata interfata paginii de login
+ */
 
 public class LogInUI{
 
+/**
+ * Metoda ce returneaza scena pentru login
+ * In metoda ne folosim de functii precum 'getStyleClass()' si 'getStylesheets()' pentru a lega acest fisier de fisierul de css pentru a infrumuseta interfata paginii
+ * @return  returneaza scena ce afiseaza interfata de login
+ */
     public Scene getLoginUI(){
 
         Label usernameLabel = new Label("Username: ");

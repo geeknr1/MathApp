@@ -5,8 +5,15 @@ import com.mathapp.MathApp;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
+
+/**
+ * Clasa aceasta arata capitolele pe care ar trebui sa le aiba subiectele algebrei in clasa a noua, fiecare capitol avand o eticheta si un buton de acces
+ */
 public class Algebra9thChaptersUI{
 
+/**
+* Clasa aceasta arata butoanele catre continutul lectiilor capitolelor care apartin de algebra clasei a IX-a, cu tot cu etichetele de deasupra butoanelor, acestea avand un rol decorativ
+*/
     public VBox getAlgebra9thChaptersUI(){
 
         Label chapter1Label = new Label("Let's learn about the 'Set of real numbers'");

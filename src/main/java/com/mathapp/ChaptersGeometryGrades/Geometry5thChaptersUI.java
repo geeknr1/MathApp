@@ -5,8 +5,15 @@ import com.mathapp.MathApp;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
+
+/**
+ * Clasa aceasta arata capitolele pe care ar trebui sa le aiba subiectele geometriei in clasa a cincea, fiecare capitol avand o eticheta si un buton de acces
+ */
 public class Geometry5thChaptersUI{
 
+/**
+* Clasa aceasta arata butoanele catre continutul lectiilor capitolelor care apartin de geometria clasei a V-a, cu tot cu etichetele de deasupra butoanelor, acestea avand un rol decorativ
+*/
     public VBox getGeometry5thChaptersUI(){
 
         Label chapter1Label = new Label("Let's learn about the 'Point' + 'Straight line' + 'Plain'");

@@ -11,10 +11,16 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+/**
+ * Clasa aceasta ne arata interfata cu subiectele matematicii care vor fi studiate in cadrul acestei aplicatii
+ */
 public class MathSubjectsUI{
 
     private static Stage primaryStage;
 
+/**
+ * In cadrul acestei metode se returneaza scena care afiseaza interfata paginii care duce catre curriculumul algebrei / geometriei / analizei matematice, subiecte din cadrul matematicii care va fi studiata in cele ce urmeaza.
+ */
     public VBox getMathSubjectsUI(Stage stage){
 
         primaryStage = stage;

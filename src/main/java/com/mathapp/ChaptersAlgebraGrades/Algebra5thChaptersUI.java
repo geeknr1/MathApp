@@ -6,7 +6,14 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 
+/**
+ * Clasa aceasta arata capitolele pe care ar trebui sa le aiba subiectele algebrei in clasa a cincea, fiecare capitol avand o eticheta si un buton de acces
+ */
 public class Algebra5thChaptersUI{
+
+/**
+* Clasa aceasta arata butoanele catre continutul lectiilor capitolelor care apartin de algebra clasei a V-a, cu tot cu etichetele de deasupra butoanelor, acestea avand un rol decorativ
+*/
 
     public VBox getAlgebra5thChaptersUI(){
 

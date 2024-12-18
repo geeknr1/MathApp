@@ -4,6 +4,9 @@ import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoDatabase;
 
+/**
+ * Rolul acestei clase este de a conecta codul aplicatiei la o baza de date Mongo. Aplicatiile n-au cum sa existe fara baze de date.
+ */
 public class DataBase {
     private static MongoClient mongoClient;
     private static MongoDatabase dataBase;

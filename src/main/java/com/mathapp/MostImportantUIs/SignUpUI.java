@@ -10,10 +10,18 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 
+/**
+ * Clasa aceasta arata interfata paginii de signup
+ */
 public class SignUpUI{
 
     //private static Stage primaryStage;
 
+/**
+ * Metoda ce returneaza scena pentru signup
+ * In metoda ne folosim de functii precum 'getStyleClass()' si 'getStylesheets()' pentru a lega acest fisier de fisierul de css pentru a infrumuseta interfata paginii
+ * @return  returneaza scena ce afiseaza interfata de signup
+ */
     public Scene getSignUpUI(){
 
         Label nameLabel = new Label("Name: ");

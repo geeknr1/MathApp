@@ -5,8 +5,14 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import com.mathapp.MathApp;
 
+/**
+ * Clasa aceasta arata capitolele pe care ar trebui sa le aiba subiectele geometriei in clasa a noua, fiecare capitol avand o eticheta si un buton de acces
+ */
 public class Geometry9thChaptersUI{
 
+/**
+* Clasa aceasta arata butoanele catre continutul lectiilor capitolelor care apartin de geometria clasei a IX-a, cu tot cu etichetele de deasupra butoanelor, acestea avand un rol decorativ
+*/
     public VBox getGeometry9thChaptersUI(){
 
         Label chapter1Label = new Label("Let's learn about the 'Elements of vector calculus in the plane'");

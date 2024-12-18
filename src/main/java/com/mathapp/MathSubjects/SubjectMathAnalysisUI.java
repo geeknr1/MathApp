@@ -10,10 +10,17 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+/**
+ * Clasa aceasta contine o lista cu butoanele claselor V - XII care duc catre capitolele fiecarei clase enumerate si care apartine de subiectul analizei matematice.
+*/
+
 public class SubjectMathAnalysisUI{
 
     private static Stage primaryStage;
 
+/**
+ * Cea mai importanta functie built-in din aceasta metoda este reprezentata de 'setOnAction' al carei rol este sa creeze legatura dintre aceasta pagina din ui si pagina urmatoare care contine butoanele catre capitolele claselor V - XII care apartin analizei matematice
+*/
     public VBox getMathAnalysisSubjectUI(Stage stage){
 
         primaryStage = stage;

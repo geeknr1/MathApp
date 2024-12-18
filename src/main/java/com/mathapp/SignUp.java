@@ -3,8 +3,14 @@ import org.bson.Document;
 
 import com.mongodb.client.MongoCollection;
 
+/**
+ * Rolul acestei clase este de a crea un nou user si de a-l adauga pe acesta in baza de date Mongo
+ */
 public class SignUp {
 
+/**
+ * Rolul acestei metode este de a autentifica userul in aplicatie
+ */
     public static boolean authentificate(String name, String surname, String username, String email, String password, String checkPassword) {
         if (name.isEmpty() || surname.isEmpty() || email.isEmpty() || password.isEmpty() || checkPassword.isEmpty()) {
             System.out.println("All fields are required.");
