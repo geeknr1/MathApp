@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.mathapp.LogInTest" time="0.612" tests="2" errors="2" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.mathapp.LogInTest" time="3.802" tests="2" errors="2" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -12,7 +12,7 @@
     <property name="java.vm.specification.version" value="21"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-21-openjdk-amd64/lib"/>
-    <property name="sun.java.command" value="/home/alex/programming/MathApp/target/surefire/surefirebooter-20241219103450515_3.jar /home/alex/programming/MathApp/target/surefire 2024-12-19T10-34-50_079-jvmRun1 surefire-20241219103450515_1tmp surefire_0-20241219103450515_2tmp"/>
+    <property name="sun.java.command" value="/home/alex/programming/MathApp/target/surefire/surefirebooter-20241219234146105_3.jar /home/alex/programming/MathApp/target/surefire 2024-12-19T23-41-45_245-jvmRun1 surefire-20241219234146105_1tmp surefire_0-20241219234146105_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/home/alex/programming/MathApp/target/test-classes:/home/alex/programming/MathApp/target/classes:/home/alex/.m2/repository/org/mongodb/mongodb-driver-sync/5.2.0/mongodb-driver-sync-5.2.0.jar:/home/alex/.m2/repository/org/mongodb/bson/5.2.0/bson-5.2.0.jar:/home/alex/.m2/repository/org/mongodb/mongodb-driver-core/5.2.0/mongodb-driver-core-5.2.0.jar:/home/alex/.m2/repository/org/mongodb/bson-record-codec/5.2.0/bson-record-codec-5.2.0.jar:/home/alex/.m2/repository/org/openjfx/javafx-controls/17/javafx-controls-17.jar:/home/alex/.m2/repository/org/openjfx/javafx-controls/17/javafx-controls-17-linux.jar:/home/alex/.m2/repository/org/openjfx/javafx-graphics/17/javafx-graphics-17.jar:/home/alex/.m2/repository/org/openjfx/javafx-graphics/17/javafx-graphics-17-linux.jar:/home/alex/.m2/repository/org/openjfx/javafx-base/17/javafx-base-17.jar:/home/alex/.m2/repository/org/openjfx/javafx-base/17/javafx-base-17-linux.jar:/home/alex/.m2/repository/org/openjfx/javafx-fxml/17/javafx-fxml-17.jar:/home/alex/.m2/repository/org/openjfx/javafx-fxml/17/javafx-fxml-17-linux.jar:/home/alex/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/alex/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/alex/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar:/home/alex/.m2/repository/org/slf4j/slf4j-simple/2.0.9/slf4j-simple-2.0.9.jar:/home/alex/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.3/junit-jupiter-api-5.9.3.jar:/home/alex/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/alex/.m2/repository/org/junit/platform/junit-platform-commons/1.9.3/junit-platform-commons-1.9.3.jar:/home/alex/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/alex/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.3/junit-jupiter-engine-5.9.3.jar:/home/alex/.m2/repository/org/junit/platform/junit-platform-engine/1.9.3/junit-platform-engine-1.9.3.jar:/home/alex/.m2/repository/org/mockito/mockito-core/5.14.2/mockito-core-5.14.2.jar:/home/alex/.m2/repository/net/bytebuddy/byte-buddy/1.15.4/byte-buddy-1.15.4.jar:/home/alex/.m2/repository/net/bytebuddy/byte-buddy-agent/1.15.4/byte-buddy-agent-1.15.4.jar:/home/alex/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/home/alex/.m2/repository/org/mockito/mockito-junit-jupiter/5.14.2/mockito-junit-jupiter-5.14.2.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -27,7 +27,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="/home/alex/programming/MathApp/target/surefire/surefirebooter-20241219103450515_3.jar"/>
+    <property name="surefire.real.class.path" value="/home/alex/programming/MathApp/target/surefire/surefirebooter-20241219234146105_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.5+11-Ubuntu-1ubuntu122.04"/>
     <property name="user.name" value="alex"/>
@@ -53,11 +53,11 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testAuthenticate_failure" classname="com.mathapp.LogInTest" time="0.423">
+  <testcase name="testAuthenticate_failure" classname="com.mathapp.LogInTest" time="3.665">
     <error message="Cannot invoke &quot;com.mongodb.client.MongoDatabase.getCollection(String)&quot; because &quot;com.mathapp.DataBase.dataBase&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "com.mongodb.client.MongoDatabase.getCollection(String)" because "com.mathapp.DataBase.dataBase" is null
 	at com.mathapp.DataBase.getCollection(DataBase.java:35)
 	at com.mathapp.LogIn.Authentificate(LogIn.java:13)
-	at com.mathapp.LogInTest.testAuthenticate_failure(LogInTest.java:23)
+	at com.mathapp.LogInTest.testAuthenticate_failure(LogInTest.java:39)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
@@ -128,7 +128,12 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></error>
-    <system-err><![CDATA[Dec 19, 2024 10:34:52 AM com.mathapp.LogInTest testAuthenticate_failure
+    <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build what is described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (/home/alex/.m2/repository/net/bytebuddy/byte-buddy-agent/1.15.4/byte-buddy-agent-1.15.4.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+Dec 19, 2024 11:41:51 PM com.mathapp.LogInTest testAuthenticate_failure
 INFO: Starting this test.
 ]]></system-err>
   </testcase>
@@ -136,7 +141,7 @@ INFO: Starting this test.
     <error message="Cannot invoke &quot;com.mongodb.client.MongoDatabase.getCollection(String)&quot; because &quot;com.mathapp.DataBase.dataBase&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "com.mongodb.client.MongoDatabase.getCollection(String)" because "com.mathapp.DataBase.dataBase" is null
 	at com.mathapp.DataBase.getCollection(DataBase.java:35)
 	at com.mathapp.LogIn.Authentificate(LogIn.java:13)
-	at com.mathapp.LogInTest.testAuthenticate_succes(LogInTest.java:15)
+	at com.mathapp.LogInTest.testAuthenticate_succes(LogInTest.java:31)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
@@ -207,7 +212,7 @@ INFO: Starting this test.
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></error>
-    <system-err><![CDATA[Dec 19, 2024 10:34:52 AM com.mathapp.LogInTest testAuthenticate_succes
+    <system-err><![CDATA[Dec 19, 2024 11:41:51 PM com.mathapp.LogInTest testAuthenticate_succes
 INFO: Starting this test.
 ]]></system-err>
   </testcase>

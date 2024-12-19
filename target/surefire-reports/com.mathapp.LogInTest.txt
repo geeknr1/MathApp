@@ -1,12 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: com.mathapp.LogInTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.612 s <<< FAILURE! -- in com.mathapp.LogInTest
-com.mathapp.LogInTest.testAuthenticate_failure -- Time elapsed: 0.423 s <<< ERROR!
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 3.802 s <<< FAILURE! -- in com.mathapp.LogInTest
+com.mathapp.LogInTest.testAuthenticate_failure -- Time elapsed: 3.665 s <<< ERROR!
 java.lang.NullPointerException: Cannot invoke "com.mongodb.client.MongoDatabase.getCollection(String)" because "com.mathapp.DataBase.dataBase" is null
 	at com.mathapp.DataBase.getCollection(DataBase.java:35)
 	at com.mathapp.LogIn.Authentificate(LogIn.java:13)
-	at com.mathapp.LogInTest.testAuthenticate_failure(LogInTest.java:23)
+	at com.mathapp.LogInTest.testAuthenticate_failure(LogInTest.java:39)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
@@ -81,7 +81,7 @@ com.mathapp.LogInTest.testAuthenticate_succes -- Time elapsed: 0.010 s <<< ERROR
 java.lang.NullPointerException: Cannot invoke "com.mongodb.client.MongoDatabase.getCollection(String)" because "com.mathapp.DataBase.dataBase" is null
 	at com.mathapp.DataBase.getCollection(DataBase.java:35)
 	at com.mathapp.LogIn.Authentificate(LogIn.java:13)
-	at com.mathapp.LogInTest.testAuthenticate_succes(LogInTest.java:15)
+	at com.mathapp.LogInTest.testAuthenticate_succes(LogInTest.java:31)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
