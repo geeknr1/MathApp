@@ -1,7 +1,8 @@
 package com.mathapp;
 
-import com.mongodb.client.MongoCollection;
 import org.bson.Document;
+
+import com.mongodb.client.MongoCollection;
 
 /**
  * Rolul acestei clase este de a verifica daca un user oarecare se afla in baza de date Mongo sau nu.
