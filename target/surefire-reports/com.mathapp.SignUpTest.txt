@@ -1,15 +1,15 @@
 -------------------------------------------------------------------------------
 Test set: com.mathapp.SignUpTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.146 s <<< FAILURE! -- in com.mathapp.SignUpTest
-com.mathapp.SignUpTest.testAuthenticate_succes -- Time elapsed: 0.059 s <<< FAILURE!
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.093 s <<< FAILURE! -- in com.mathapp.SignUpTest
+com.mathapp.SignUpTest.testAuthenticate_succes -- Time elapsed: 0.029 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: ERROR ==> expected: <true> but was: <false>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
 	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
 	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
 	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:211)
-	at com.mathapp.SignUpTest.testAuthenticate_succes(SignUpTest.java:31)
+	at com.mathapp.SignUpTest.testAuthenticate_succes(SignUpTest.java:32)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)

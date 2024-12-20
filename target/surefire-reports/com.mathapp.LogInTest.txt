@@ -1,12 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: com.mathapp.LogInTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 3.802 s <<< FAILURE! -- in com.mathapp.LogInTest
-com.mathapp.LogInTest.testAuthenticate_failure -- Time elapsed: 3.665 s <<< ERROR!
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 4.084 s <<< FAILURE! -- in com.mathapp.LogInTest
+com.mathapp.LogInTest.testAuthenticate_failure -- Time elapsed: 3.932 s <<< ERROR!
 java.lang.NullPointerException: Cannot invoke "com.mongodb.client.MongoDatabase.getCollection(String)" because "com.mathapp.DataBase.dataBase" is null
 	at com.mathapp.DataBase.getCollection(DataBase.java:35)
 	at com.mathapp.LogIn.Authentificate(LogIn.java:13)
-	at com.mathapp.LogInTest.testAuthenticate_failure(LogInTest.java:39)
+	at com.mathapp.LogInTest.testAuthenticate_failure(LogInTest.java:42)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
@@ -77,11 +77,11 @@ java.lang.NullPointerException: Cannot invoke "com.mongodb.client.MongoDatabase.
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.mathapp.LogInTest.testAuthenticate_succes -- Time elapsed: 0.010 s <<< ERROR!
+com.mathapp.LogInTest.testAuthenticate_succes -- Time elapsed: 0.019 s <<< ERROR!
 java.lang.NullPointerException: Cannot invoke "com.mongodb.client.MongoDatabase.getCollection(String)" because "com.mathapp.DataBase.dataBase" is null
 	at com.mathapp.DataBase.getCollection(DataBase.java:35)
 	at com.mathapp.LogIn.Authentificate(LogIn.java:13)
-	at com.mathapp.LogInTest.testAuthenticate_succes(LogInTest.java:31)
+	at com.mathapp.LogInTest.testAuthenticate_succes(LogInTest.java:33)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
