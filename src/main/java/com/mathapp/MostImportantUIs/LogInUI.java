@@ -50,6 +50,7 @@ public class LogInUI{
             boolean isAuthenticated = LogIn.Authentificate(enteredUsername, enteredPassword);
             if(isAuthenticated){
                 resultLabel.setText("Login Successful.");
+                MathApp.showDashBoard();
                 System.out.println("Welcome to fun math: " + enteredUsername);
             }
             else

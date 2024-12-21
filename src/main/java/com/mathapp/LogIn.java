@@ -15,7 +15,7 @@ public class LogIn{
         if(userDoc != null){
             String mongoPassword = userDoc.getString("password");
             if(mongoPassword.equals(password)){
-                MathApp.showDashBoard();
+                return true;
             }
             return mongoPassword.equals(password);
         }
