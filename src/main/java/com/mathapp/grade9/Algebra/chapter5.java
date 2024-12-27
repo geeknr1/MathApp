@@ -7,7 +7,7 @@ import javafx.stage.Stage;
 public class chapter5{
     private static Stage primaryStage;
 
-    public VBox getChapter1UI(Stage stage){
+    public VBox getChapter5UIalgebra9Grade(Stage stage){
 
         primaryStage = stage;
 

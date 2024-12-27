@@ -1,14 +1,13 @@
 package com.mathapp.grade5.Algebra;
 
-import javafx.stage.Stage;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 public class chapter9{
     private static Stage primaryStage;
 
-    public VBox getChapter1UI(Stage stage){
+    public VBox getChapter9UIalgebra5Grade(Stage stage){
 
         primaryStage = stage;
 

@@ -1,20 +1,27 @@
 package com.mathapp.ChaptersAlgebraGrades;
 
 import com.mathapp.MathApp;
+import com.mathapp.grade12.Algebra.chapter1;
+import com.mathapp.grade12.Algebra.chapter2;
+import com.mathapp.grade12.Algebra.chapter3;
 
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
 /**
  * Clasa aceasta arata capitolele pe care ar trebui sa le aiba subiectele algebrei in clasa a doisprezecea, fiecare capitol avand o eticheta si un buton de acces
  */
 public class Algebra12thChaptersUI{
-
+    private static Stage primaryStage;
 /**
 * Clasa aceasta arata butoanele catre continutul lectiilor capitolelor care apartin de algebra clasei a XII-a, cu tot cu etichetele de deasupra butoanelor, acestea avand un rol decorativ
 */
-    public VBox getAlgebra12thChaptersUI(){
+    public VBox getAlgebra12thChaptersUI(Stage stage){
+
+        primaryStage = stage;
 
         Label chapter1Label = new Label("Let's learn about 'Groups'");
         Button chapter1Button = new Button("Groups");
@@ -26,15 +33,30 @@ public class Algebra12thChaptersUI{
         Button back = new Button("Back");
         
         chapter1Button.setOnAction(event->{
-            MathApp.showToBeContinued();
+    VBox chapter1Algebra12 = new VBox(10);
+	chapter1 algebra1UIalgebra12 = new chapter1();
+	Label chap1Algebra12Label = new Label("Welcome to the 1st chapter of the 5th grade!");
+	chapter1Algebra12.getChildren().addAll(chap1Algebra12Label, algebra1UIalgebra12.getChapter1UIalgebra12Grade(stage));
+	Scene chapter1SceneAlg12 = new Scene(chapter1Algebra12, 600, 800);
+	primaryStage.setScene(chapter1SceneAlg12);
         });
 
         chapter2Button.setOnAction(event->{
-            MathApp.showToBeContinued();
+    VBox chapter2Algebra12 = new VBox(10);
+	chapter2 algebra2UIalgebra12 = new chapter2();
+	Label chap2Algebra12Label = new Label("Welcome to the 1st chapter of the 5th grade!");
+	chapter2Algebra12.getChildren().addAll(chap2Algebra12Label, algebra2UIalgebra12.getChapter2UIalgebra12Grade(stage));
+	Scene chapter2SceneAlg12 = new Scene(chapter2Algebra12, 600, 800);
+	primaryStage.setScene(chapter2SceneAlg12);
         });
 
         chapter3Button.setOnAction(event->{
-            MathApp.showToBeContinued();
+    VBox chapter3Algebra12 = new VBox(10);
+	chapter3 algebra3UIalgebra12 = new chapter3();
+	Label chap3Algebra12Label = new Label("Welcome to the 1st chapter of the 5th grade!");
+	chapter3Algebra12.getChildren().addAll(chap3Algebra12Label, algebra3UIalgebra12.getChapter3UIalgebra12Grade(stage));
+	Scene chapter3SceneAlg12 = new Scene(chapter3Algebra12, 600, 800);
+	primaryStage.setScene(chapter3SceneAlg12);
         });
 
         back.setOnAction(event->{

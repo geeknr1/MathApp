@@ -1,14 +1,13 @@
 package com.mathapp.grade5.Geometry;
 
-import javafx.stage.Stage;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 public class chapter3{
     private static Stage primaryStage;
 
-    public VBox getChapter1UI(Stage stage){
+    public VBox getChapter3UIgeometry5Grade(Stage stage){
 
         primaryStage = stage;
 

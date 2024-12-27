@@ -56,7 +56,7 @@ public class SubjectAlgebraUI{
             VBox fifthGrade = new VBox(10);
             Algebra5thChaptersUI fifthGradeUI = new Algebra5thChaptersUI();
             Label fiveGradeLabel = new Label("Welcome to the 5th grade in Algebra!");
-            fifthGrade.getChildren().addAll(fiveGradeLabel, fifthGradeUI.getAlgebra5thChaptersUI());
+            fifthGrade.getChildren().addAll(fiveGradeLabel, fifthGradeUI.getAlgebra5thChaptersUI(stage));
             Scene fifthGradeScene = new Scene(fifthGrade, 600, 800);
             primaryStage.setScene(fifthGradeScene);
         });

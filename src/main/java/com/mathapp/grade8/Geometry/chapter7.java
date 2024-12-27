@@ -1,14 +1,13 @@
 package com.mathapp.grade8.Geometry;
 
-import javafx.stage.Stage;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 public class chapter7{
     private static Stage primaryStage;
 
-    public VBox getChapter1UI(Stage stage){
+    public VBox getChapter7UIgeometry8Grade(Stage stage){
 
         primaryStage = stage;
 
