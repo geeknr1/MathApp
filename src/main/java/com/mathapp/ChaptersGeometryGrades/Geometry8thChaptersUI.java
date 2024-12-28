@@ -1,12 +1,5 @@
 package com.mathapp.ChaptersGeometryGrades;
 
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.layout.VBox;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-
-import com.mathapp.MathApp;
 import com.mathapp.grade8.Geometry.chapter1;
 import com.mathapp.grade8.Geometry.chapter2;
 import com.mathapp.grade8.Geometry.chapter3;
@@ -15,6 +8,12 @@ import com.mathapp.grade8.Geometry.chapter5;
 import com.mathapp.grade8.Geometry.chapter6;
 import com.mathapp.grade8.Geometry.chapter7;
 import com.mathapp.grade8.Geometry.chapter8;
+
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
 
 /**
