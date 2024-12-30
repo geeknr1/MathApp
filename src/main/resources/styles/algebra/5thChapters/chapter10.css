@@ -1,0 +1,45 @@
+.root{
+    -fx-padding: 20;
+    -fx-spacing: 10;
+    -fx-background-color: url(mathimg.jpg);
+}
+
+.label{
+    -fx-font-size: 15px;
+    -fx-text-fill: #111;
+}
+
+.text-field{
+    -fx-background-color: #3cff00;
+    -fx-border-color: #ff0000;
+    -fx-border-radius: 4px;
+    -fx-padding: 5;
+}
+
+.password-field{
+    -fx-background-color: #3cff00;
+    -fx-border-color: #ff0000;
+    -fx-border-radius: 4px;
+    -fx-padding: 5;
+}
+
+.button{
+    -fx-background-color: #ffffff;
+    -fx-text-fill:#3cff00;
+    -fx-font-size: 14px;
+    -fx-border-radius: 4px;
+    -fx-padding: 5 10;
+}
+
+.scrollbar{
+    -fx-background-color: #000000
+}
+
+.button:hover{
+    -fx-background-color:#3700ff;
+}
+
+.label.result-label{
+    -fx-font-size:14px;
+    -fx-text-file:red;
+}

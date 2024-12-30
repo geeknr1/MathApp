@@ -5,11 +5,13 @@ import com.mathapp.grade9.Geometry.chapter1;
 import com.mathapp.grade9.Geometry.chapter2;
 import com.mathapp.grade9.Geometry.chapter3;
 
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollBar;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import javafx.scene.Scene;
 
 /**
  * Clasa aceasta arata capitolele pe care ar trebui sa le aiba subiectele geometriei in clasa a noua, fiecare capitol avand o eticheta si un buton de acces
@@ -67,7 +69,22 @@ chapter1Button.setOnAction(event->{
         VBox root = new VBox(10);
         root.getChildren().addAll(chapter1Label, chapter1Button, chapter2Label, chapter2Button, chapter3Label, chapter3Button, back);
 
-        return root;
+        ScrollBar scrollBar = new ScrollBar();
+        scrollBar.setOrientation(javafx.geometry.Orientation.VERTICAL);
+
+        scrollBar.setMin(0);
+        scrollBar.setMax(400);
+        scrollBar.setPrefHeight(800);
+        scrollBar.setLayoutX(580);
+
+        scrollBar.valueProperty().addListener((obs, oldVal, newVal) -> {
+            root.setLayoutY(-newVal.doubleValue());
+        });
+
+        Pane contentPane = new Pane();
+        contentPane.getChildren().addAll(root, scrollBar);
+
+        return new VBox(contentPane);
    }
 
 }

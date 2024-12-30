@@ -1,5 +1,6 @@
 package com.mathapp.ChaptersGeometryGrades;
 
+import com.mathapp.MathApp;
 import com.mathapp.grade8.Geometry.chapter1;
 import com.mathapp.grade8.Geometry.chapter2;
 import com.mathapp.grade8.Geometry.chapter3;
@@ -14,6 +15,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import javafx.scene.control.ScrollBar;
+import javafx.scene.layout.Pane;
 
 
 /**
@@ -122,7 +125,22 @@ public class Geometry8thChaptersUI{
         VBox root = new VBox(10);
         root.getChildren().addAll(chapter1Label, chapter1Button, chapter2Label, chapter2Button, chapter3Label, chapter3Button, chapter4Label, chapter4Button, chapter5Label, chapter5Button, chapter6Label, chapter6Button, chapter7Label, chapter7Button, chapter8Label, chapter8Button, back);
 
-        return root;
+        ScrollBar scrollBar = new ScrollBar();
+        scrollBar.setOrientation(javafx.geometry.Orientation.VERTICAL);
+
+        scrollBar.setMin(0);
+        scrollBar.setMax(400);
+        scrollBar.setPrefHeight(800);
+        scrollBar.setLayoutX(580);
+
+        scrollBar.valueProperty().addListener((obs, oldVal, newVal) -> {
+            root.setLayoutY(-newVal.doubleValue());
+        });
+
+        Pane contentPane = new Pane();
+        contentPane.getChildren().addAll(root, scrollBar);
+
+        return new VBox(contentPane);
    }
 
 }

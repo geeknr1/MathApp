@@ -1,7 +1,11 @@
 package com.mathapp.grade12.Algebra;
 
+import com.mathapp.MathApp;
+
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollBar;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 public class chapter3{
@@ -25,6 +29,8 @@ public class chapter3{
         Button buttonLesson6 = new Button("Polynomials with real coefficients. Polynomials with rational coefficients. Polynomials with integer coefficients");
         Label labelLesson7 = new Label("Let's learn more about the ' Higher degree algebraic equations '");
         Button buttonLesson7 = new Button("Higher degree algebraic equations");
+
+        Button back = new Button("Back");
         
         buttonLesson1.setOnAction(event->{
             System.out.println("To be continued");
@@ -54,11 +60,30 @@ public class chapter3{
             System.out.println("To be continued");
         });
 
+        back.setOnAction(event->{
+            MathApp.show12thGradeAlgebra();
+        });
+
         VBox root = new VBox(10);
         root.getChildren().addAll(labelLesson1, buttonLesson1, labelLesson2, buttonLesson2, labelLesson3, buttonLesson3, 
                                   labelLesson4, buttonLesson4, labelLesson5, buttonLesson5, labelLesson6, buttonLesson6, 
-                                  labelLesson7, buttonLesson7);
+                                  labelLesson7, buttonLesson7, back);
 
-        return root;
+        ScrollBar scrollBar = new ScrollBar();
+        scrollBar.setOrientation(javafx.geometry.Orientation.VERTICAL);
+
+        scrollBar.setMin(0);
+        scrollBar.setMax(400);
+        scrollBar.setPrefHeight(800);
+        scrollBar.setLayoutX(580);
+
+        scrollBar.valueProperty().addListener((obs, oldVal, newVal) -> {
+            root.setLayoutY(-newVal.doubleValue());
+        });
+
+        Pane contentPane = new Pane();
+        contentPane.getChildren().addAll(root, scrollBar);
+
+        return new VBox(contentPane);
     }
 }

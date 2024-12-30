@@ -1,5 +1,21 @@
 package com.mathapp;
 
+import com.mathapp.ChaptersAlgebraGrades.Algebra10thChaptersUI;
+import com.mathapp.ChaptersAlgebraGrades.Algebra11thChaptersUI;
+import com.mathapp.ChaptersAlgebraGrades.Algebra12thChaptersUI;
+import com.mathapp.ChaptersAlgebraGrades.Algebra5thChaptersUI;
+import com.mathapp.ChaptersAlgebraGrades.Algebra6thChaptersUI;
+import com.mathapp.ChaptersAlgebraGrades.Algebra7thChaptersUI;
+import com.mathapp.ChaptersAlgebraGrades.Algebra8thChaptersUI;
+import com.mathapp.ChaptersAlgebraGrades.Algebra9thChaptersUI;
+import com.mathapp.ChaptersGeometryGrades.Geometry10thChaptersUI;
+import com.mathapp.ChaptersGeometryGrades.Geometry5thChaptersUI;
+import com.mathapp.ChaptersGeometryGrades.Geometry6thChaptersUI;
+import com.mathapp.ChaptersGeometryGrades.Geometry7thChaptersUI;
+import com.mathapp.ChaptersGeometryGrades.Geometry8thChaptersUI;
+import com.mathapp.ChaptersGeometryGrades.Geometry9thChaptersUI;
+import com.mathapp.ChaptersMathAnalysisGrades.MathematicalAnalysis11thChaptersUI;
+import com.mathapp.ChaptersMathAnalysisGrades.MathematicalAnalysis12thChaptersUI;
 import com.mathapp.MathSubjects.SubjectAlgebraUI;
 import com.mathapp.MathSubjects.SubjectGeometryUI;
 import com.mathapp.MathSubjects.SubjectMathAnalysisUI;
@@ -9,10 +25,10 @@ import com.mathapp.MostImportantUIs.SignUpUI;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import javafx.scene.control.Button;
 
 /**
  * Aceasta clasa este baza aplicatiei noastre, in care utilizatorii o sa invete matematica din scoala generala si matematica de liceu.
@@ -47,11 +63,11 @@ public class MathApp extends Application {
      */
 
     public static void showDashBoard(){
-        VBox dashboard = new VBox(10);
+        //VBox dashboard = new VBox(10);
         MathSubjectsUI subjectsUI = new MathSubjectsUI();
-        Label dashboardLabel = new Label("Welcome to fun math.");
-        dashboard.getChildren().addAll(dashboardLabel, subjectsUI.getMathSubjectsUI(primaryStage));
-        Scene dashboardScene = new Scene(dashboard, 800, 600);
+        // Label dashboardLabel = new Label("Welcome to fun math.");
+        // dashboard.getChildren().addAll(dashboardLabel, subjectsUI.getMathSubjectsUI(primaryStage));
+        Scene dashboardScene = subjectsUI.getMathSubjectsUI(primaryStage);
         primaryStage.setScene(dashboardScene);    
     }
 
@@ -71,7 +87,7 @@ public class MathApp extends Application {
 
     public static void showMathSubjects(){
         MathSubjectsUI subjectsUI = new MathSubjectsUI();
-        Scene subjectsScene = new Scene(subjectsUI.getMathSubjectsUI(primaryStage), 800, 600);
+        Scene subjectsScene = subjectsUI.getMathSubjectsUI(primaryStage);
         primaryStage.setScene(subjectsScene);
     }
 
@@ -81,7 +97,7 @@ public class MathApp extends Application {
 
     public static void showAlgebraSubject(){
         SubjectAlgebraUI subjectsAlgebraUI = new SubjectAlgebraUI();
-        Scene subjectsAlgebraScene = new Scene(subjectsAlgebraUI.getAlgebraChaptersUI(primaryStage), 800, 600);
+        Scene subjectsAlgebraScene = subjectsAlgebraUI.getAlgebraChaptersUI(primaryStage);
         primaryStage.setScene(subjectsAlgebraScene);
     }
 
@@ -91,7 +107,7 @@ public class MathApp extends Application {
 
     public static void showGeometrySubject(){
         SubjectGeometryUI subjectsGeometryUI = new SubjectGeometryUI();
-        Scene subjectsGeometryScene = new Scene(subjectsGeometryUI.getGeometrySubjectUI(primaryStage), 800, 600);
+        Scene subjectsGeometryScene = subjectsGeometryUI.getGeometrySubjectUI(primaryStage);
         primaryStage.setScene(subjectsGeometryScene);
     }
 
@@ -101,13 +117,109 @@ public class MathApp extends Application {
 
     public static void showMathematicalAnalysisSubject(){
         SubjectMathAnalysisUI subjectsMathAnalysisUI = new SubjectMathAnalysisUI();
-        Scene subjectsMathAnalysisScene = new Scene(subjectsMathAnalysisUI.getMathAnalysisSubjectUI(primaryStage), 800, 600);
+        Scene subjectsMathAnalysisScene = subjectsMathAnalysisUI.getMathAnalysisSubjectUI(primaryStage);
         primaryStage.setScene(subjectsMathAnalysisScene); 
     }
 
     /**
      * Aceasta metoda seteaza scena cu label-ul "To be continued." si butonul "Back" catre butonul subiectului "Algebra"
      */
+
+    public static void show5thGradeAlgebra(){
+        Algebra5thChaptersUI algebra5thLessonsUI = new Algebra5thChaptersUI();
+        Scene algebra5thLessonsScene = algebra5thLessonsUI.getAlgebra5thChaptersUI(primaryStage);
+        primaryStage.setScene(algebra5thLessonsScene);
+    }
+
+    public static void show6thGradeAlgebra(){
+        Algebra6thChaptersUI algebra6thLessonsUI = new Algebra6thChaptersUI();
+        Scene algebra6thLessonsScene = algebra6thLessonsUI.getAlgebra6thChaptersUI(primaryStage);
+        primaryStage.setScene(algebra6thLessonsScene);
+    }
+
+    public static void show7thGradeAlgebra(){
+        Algebra7thChaptersUI algebra7thLessonsUI = new Algebra7thChaptersUI();
+        Scene algebra7thLessonsScene = new Scene(algebra7thLessonsUI.getAlgebra7thChaptersUI(primaryStage), 800, 600);
+        primaryStage.setScene(algebra7thLessonsScene);
+    }
+
+    public static void show8thGradeAlgebra(){
+        Algebra8thChaptersUI algebra8thLessonsUI = new Algebra8thChaptersUI();
+        Scene algebra8thLessonsScene = new Scene(algebra8thLessonsUI.getAlgebra8thChaptersUI(primaryStage), 800, 600);
+        primaryStage.setScene(algebra8thLessonsScene);
+    }
+
+    public static void show9thGradeAlgebra(){
+        Algebra9thChaptersUI algebra9thLessonsUI = new Algebra9thChaptersUI();
+        Scene algebra9thLessonsScene = new Scene(algebra9thLessonsUI.getAlgebra9thChaptersUI(primaryStage), 800, 600);
+        primaryStage.setScene(algebra9thLessonsScene);
+    }
+
+    public static void show10thGradeAlgebra(){
+        Algebra10thChaptersUI algebra10thLessonsUI = new Algebra10thChaptersUI();
+        Scene algebra10thLessonsScene = new Scene(algebra10thLessonsUI.getAlgebra10thChaptersUI(primaryStage), 800, 600);
+        primaryStage.setScene(algebra10thLessonsScene);
+    }
+
+    public static void show11thGradeAlgebra(){
+        Algebra11thChaptersUI algebra11thLessonsUI = new Algebra11thChaptersUI();
+        Scene algebra11thLessonsScene = new Scene(algebra11thLessonsUI.getAlgebra11thChaptersUI(primaryStage), 800, 600);
+        primaryStage.setScene(algebra11thLessonsScene);
+    }
+
+    public static void show12thGradeAlgebra(){
+        Algebra12thChaptersUI algebra12thLessonsUI = new Algebra12thChaptersUI();
+        Scene algebra12thLessonsScene = new Scene(algebra12thLessonsUI.getAlgebra12thChaptersUI(primaryStage), 800, 600);
+        primaryStage.setScene(algebra12thLessonsScene);
+    }
+
+    public static void show5thGradeGeometry(){
+        Geometry5thChaptersUI geometry5thLessonsUI = new Geometry5thChaptersUI();
+        Scene geometry5thLessonsScene = geometry5thLessonsUI.getGeometry5thChaptersUI(primaryStage);
+        primaryStage.setScene(geometry5thLessonsScene);
+    }
+
+    public static void show6thGradeGeometry(){
+        Geometry6thChaptersUI geometry6thLessonsUI = new Geometry6thChaptersUI();
+        Scene geometry6thLessonsScene = new Scene(geometry6thLessonsUI.getGeometry6thChaptersUI(primaryStage), 800, 600);
+        primaryStage.setScene(geometry6thLessonsScene);
+    }
+
+    public static void show7thGradeGeometry(){
+        Geometry7thChaptersUI geometry7thLessonsUI = new Geometry7thChaptersUI();
+        Scene geometry7thLessonsScene = new Scene(geometry7thLessonsUI.getGeometry7thChaptersUI(primaryStage), 800, 600);
+        primaryStage.setScene(geometry7thLessonsScene);
+    }
+
+    public static void show8thGradeGeometry(){
+        Geometry8thChaptersUI geometry8thLessonsUI = new Geometry8thChaptersUI();
+        Scene geometry8thLessonsScene = new Scene(geometry8thLessonsUI.getGeometry8thChaptersUI(primaryStage), 800, 600);
+        primaryStage.setScene(geometry8thLessonsScene);
+    }
+
+    public static void show9thGradeGeometry(){
+        Geometry9thChaptersUI geometry9thLessonsUI = new Geometry9thChaptersUI();
+        Scene geometry9thLessonsScene = new Scene(geometry9thLessonsUI.getGeometry9thChaptersUI(primaryStage), 800, 600);
+        primaryStage.setScene(geometry9thLessonsScene);
+    }
+
+    public static void show10thGradeGeometry(){
+        Geometry10thChaptersUI geometry10thLessonsUI = new Geometry10thChaptersUI();
+        Scene geometry10thLessonsScene = new Scene(geometry10thLessonsUI.getGeometry10thChaptersUI(primaryStage), 800, 600);
+        primaryStage.setScene(geometry10thLessonsScene);
+    }
+
+    public static void show11thGradeMathAnalysis(){
+        MathematicalAnalysis11thChaptersUI mathAnalysis11thLessonsUI = new MathematicalAnalysis11thChaptersUI();
+        Scene mathAnalysiss11thLessonsScene = mathAnalysis11thLessonsUI.getMathematicalAnalysis11thChaptersUI(primaryStage);
+        primaryStage.setScene(mathAnalysiss11thLessonsScene);
+    }
+
+    public static void show12thGradeMathAnalysis(){
+        MathematicalAnalysis12thChaptersUI mathAnalysis12thLessonsUI = new MathematicalAnalysis12thChaptersUI();
+        Scene mathAnalysiss12thLessonsScene = new Scene(mathAnalysis12thLessonsUI.getMathematicalAnalysis12thChaptersUI(primaryStage), 800, 600);
+        primaryStage.setScene(mathAnalysiss12thLessonsScene);
+    }
 
     public static void showToBeContinued(){
         VBox futureUI = new VBox(10);

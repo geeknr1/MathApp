@@ -4,6 +4,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+
+import com.mathapp.MathApp;
 public class chapter1{
     private static Stage primaryStage;
 
@@ -15,6 +17,8 @@ public class chapter1{
         Button buttonLesson1 = new Button("Methods of calculating the primitives of a function");
         Label labelLesson2 = new Label("Let's learn more about the 'Functions that admit primitives' and the 'Primitive of a function'");
         Button buttonLesson2 = new Button("Subtraction of natural numbers");
+
+        Button back = new Button("Back");
         
         buttonLesson1.setOnAction(event->{
             System.out.println("To be continued");
@@ -24,8 +28,12 @@ public class chapter1{
             System.out.println("To be continued");
         });
 
+        back.setOnAction(event->{
+            MathApp.show12thGradeMathAnalysis();
+        });
+
         VBox root = new VBox(10);
-        root.getChildren().addAll(labelLesson1, buttonLesson1, labelLesson2, buttonLesson2);
+        root.getChildren().addAll(labelLesson1, buttonLesson1, labelLesson2, buttonLesson2, back);
 
         return root;
     }

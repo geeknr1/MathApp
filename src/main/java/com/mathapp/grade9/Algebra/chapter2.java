@@ -4,6 +4,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+
+import com.mathapp.MathApp;
 public class chapter2{
     private static Stage primaryStage;
 
@@ -19,6 +21,8 @@ public class chapter2{
         Button buttonLesson3 = new Button("Mathematical Induction");
         Label labelLesson4 = new Label("Let's do some ' Counting Problems '");
         Button buttonLesson4 = new Button("Counting Problems");
+
+        Button back = new Button("Back");
         
         buttonLesson1.setOnAction(event->{
             System.out.println("To be continued");
@@ -36,9 +40,13 @@ public class chapter2{
             System.out.println("To be continued");
         });
 
+        back.setOnAction(event->{
+            MathApp.show9thGradeAlgebra();
+        });
+
         VBox root = new VBox(10);
         root.getChildren().addAll(labelLesson1, buttonLesson1, labelLesson2, buttonLesson2, labelLesson3, buttonLesson3, 
-                                  labelLesson4, buttonLesson4);
+                                  labelLesson4, buttonLesson4, back);
 
         return root;
     }

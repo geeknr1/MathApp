@@ -4,6 +4,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+
+import com.mathapp.MathApp;
 public class chapter5{
     private static Stage primaryStage;
 
@@ -17,6 +19,8 @@ public class chapter5{
         Button buttonLesson2 = new Button("Angle between a Line and a Plane. Projection Length of a Segment.");
         Label labelLesson3 = new Label("Let's learn more about the 'Dihedral Angle' ; the 'Angle of Two Planes' and the 'Perpendicular Planes'");
         Button buttonLesson3 = new Button("Dihedral Angle. Angle of Two Planes. Perpendicular Planes");
+
+        Button back = new Button("Back");
         
         buttonLesson1.setOnAction(event->{
             System.out.println("To be continued");
@@ -30,8 +34,12 @@ public class chapter5{
             System.out.println("To be continued");
         });
 
+        back.setOnAction(event->{
+            MathApp.show8thGradeGeometry();
+        });
+
         VBox root = new VBox(10);
-        root.getChildren().addAll(labelLesson1, buttonLesson1, labelLesson2, buttonLesson2, labelLesson3, buttonLesson3);
+        root.getChildren().addAll(labelLesson1, buttonLesson1, labelLesson2, buttonLesson2, labelLesson3, buttonLesson3, back);
 
         return root;
     }

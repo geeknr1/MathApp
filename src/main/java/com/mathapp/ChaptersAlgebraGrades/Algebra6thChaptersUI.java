@@ -8,11 +8,12 @@ import com.mathapp.grade6.Algebra.chapter4;
 import com.mathapp.grade6.Algebra.chapter5;
 import com.mathapp.grade6.Algebra.chapter6;
 
-
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollBar;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /**
@@ -26,26 +27,41 @@ public class Algebra6thChaptersUI{
 * Clasa aceasta arata butoanele catre continutul lectiilor capitolelor care apartin de algebra clasei a VI-a, cu tot cu etichetele de deasupra butoanelor, acestea avand un rol decorativ
 */
 
-    public VBox getAlgebra6thChaptersUI(Stage stage){
+    public Scene getAlgebra6thChaptersUI(Stage stage){
 
         primaryStage = stage;
 
         Label chapter1Label = new Label("Let's learn about 'Sets of numbers'");
+        chapter1Label.getStyleClass().add("label");
         Button chapter1Button = new Button("Sets of numbers");
+        chapter1Button.getStyleClass().add("button");
         Label chapter2Label = new Label("Let's learn about the 'Divisibility of natural numbers'");
+        chapter2Label.getStyleClass().add("label");
         Button chapter2Button = new Button("Divisibility of natural numbers");
+        chapter2Button.getStyleClass().add("button");
         Label chapter3Label = new Label("Let's learn about 'Methods of solving problems'");
+        chapter3Label.getStyleClass().add("label");
         Button chapter3Button = new Button("Methods of solving problems");
+        chapter3Button.getStyleClass().add("button");
         Label chapter4Label = new Label("Let's learn about 'Reports + Proportion + Derived proportions + The string of equal reports'");
+        chapter4Label.getStyleClass().add("label");
         Button chapter4Button = new Button("Reports. Proportion. Derived proportions. String of equal reports.");
+        chapter4Button.getStyleClass().add("button");
         Label chapter5Label = new Label("Let's learn about 'Data organization elements and probabilities'");
+        chapter5Label.getStyleClass().add("label");
         Button chapter5Button = new Button("Data organization elements and probabilities");
+        chapter5Button.getStyleClass().add("button");
         Label chapter6Label = new Label("Let's learn about 'Integers'");
+        chapter6Label.getStyleClass().add("label");
         Button chapter6Button = new Button("Integers");
+        chapter6Button.getStyleClass().add("button");
         Label chapter7Label = new Label("Let's learn about 'Rational numbers'");
+        chapter7Label.getStyleClass().add("label");
         Button chapter7Button = new Button("Rational numbers");
+        chapter7Button.getStyleClass().add("button");
 
         Button back = new Button("Back");
+        back.getStyleClass().add("button");
 
 
         chapter1Button.setOnAction(event->{
@@ -109,7 +125,26 @@ public class Algebra6thChaptersUI{
         VBox root = new VBox(10);
         root.getChildren().addAll(chapter1Label, chapter1Button, chapter2Label, chapter2Button, chapter3Label, chapter3Button, chapter4Label, chapter4Button, chapter5Label, chapter5Button, chapter6Label, chapter6Button, chapter7Label, chapter7Button, back);
 
-        return root;
+       ScrollBar scrollBar = new ScrollBar();
+        scrollBar.setOrientation(javafx.geometry.Orientation.VERTICAL);
+
+        scrollBar.setMin(0);
+        scrollBar.setMax(400);
+        scrollBar.setPrefHeight(800);
+        scrollBar.setLayoutX(580);
+
+        scrollBar.valueProperty().addListener((obs, oldVal, newVal) -> {
+            root.setLayoutY(-newVal.doubleValue());
+        });
+
+        Pane contentPane = new Pane();
+        contentPane.getChildren().addAll(root, scrollBar);
+
+        VBox newRoot = new VBox(contentPane);
+        Scene scene = new Scene(newRoot, 800, 600);
+        scene.getStylesheets().add(getClass().getResource("/styles/algebra/6thGrade.css").toExternalForm());
+
+        return scene;
    }
 
 }

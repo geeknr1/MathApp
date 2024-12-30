@@ -4,6 +4,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+
+import com.mathapp.MathApp;
 public class chapter3{
     private static Stage primaryStage;
 
@@ -17,6 +19,8 @@ public class chapter3{
         Button buttonLesson2 = new Button("Volume of bodies of revolution");
         Label labelLesson3 = new Label("Let's learn more about the ' Multiplication of natural numbers '");
         Button buttonLesson3 = new Button("Calculation of limits of series using the definite integral");
+
+        Button back = new Button("Back");
         
         buttonLesson1.setOnAction(event->{
             System.out.println("To be continued");
@@ -30,8 +34,12 @@ public class chapter3{
             System.out.println("To be continued");
         });
 
+        back.setOnAction(event->{
+            MathApp.show12thGradeMathAnalysis();
+        });
+
         VBox root = new VBox(10);
-        root.getChildren().addAll(labelLesson1, buttonLesson1, labelLesson2, buttonLesson2, labelLesson3, buttonLesson3);
+        root.getChildren().addAll(labelLesson1, buttonLesson1, labelLesson2, buttonLesson2, labelLesson3, buttonLesson3, back);
 
         return root;
     }

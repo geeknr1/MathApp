@@ -4,6 +4,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import javafx.scene.control.ScrollBar;
+import javafx.scene.layout.Pane;
+
+import com.mathapp.MathApp;
 public class chapter1{
     private static Stage primaryStage;
 
@@ -21,6 +25,8 @@ public class chapter1{
         Button buttonLesson4 = new Button("Integer and fractional part of a real number. Equations");
         Label labelLesson5 = new Label("Let's learn more about ' Operations with intervals of real numbers '");
         Button buttonLesson5 = new Button("Operations with intervals of real numbers");
+
+        Button back = new Button("Back");
         
         buttonLesson1.setOnAction(event->{
             System.out.println("To be continued");
@@ -42,10 +48,29 @@ public class chapter1{
             System.out.println("To be continued");
         });
 
+        back.setOnAction(event->{
+            MathApp.show9thGradeAlgebra();
+        });
+
         VBox root = new VBox(10);
         root.getChildren().addAll(labelLesson1, buttonLesson1, labelLesson2, buttonLesson2, labelLesson3, buttonLesson3, 
-                                  labelLesson4, buttonLesson4, labelLesson5, buttonLesson5);
+                                  labelLesson4, buttonLesson4, labelLesson5, buttonLesson5, back);
 
-        return root;
+        ScrollBar scrollBar = new ScrollBar();
+        scrollBar.setOrientation(javafx.geometry.Orientation.VERTICAL);
+
+        scrollBar.setMin(0);
+        scrollBar.setMax(400);
+        scrollBar.setPrefHeight(800);
+        scrollBar.setLayoutX(580);
+
+        scrollBar.valueProperty().addListener((obs, oldVal, newVal) -> {
+            root.setLayoutY(-newVal.doubleValue());
+        });
+
+        Pane contentPane = new Pane();
+        contentPane.getChildren().addAll(root, scrollBar);
+
+        return new VBox(contentPane);
     }
 }

@@ -7,6 +7,8 @@ import com.mathapp.grade10.Geometry.chapter2;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollBar;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -54,7 +56,22 @@ public class Geometry10thChaptersUI{
         VBox root = new VBox(10);
         root.getChildren().addAll(chapter1Label, chapter1Button, chapter2Label, chapter2Button, back);
 
-        return root;
+        ScrollBar scrollBar = new ScrollBar();
+        scrollBar.setOrientation(javafx.geometry.Orientation.VERTICAL);
+
+        scrollBar.setMin(0);
+        scrollBar.setMax(400);
+        scrollBar.setPrefHeight(800);
+        scrollBar.setLayoutX(580);
+
+        scrollBar.valueProperty().addListener((obs, oldVal, newVal) -> {
+            root.setLayoutY(-newVal.doubleValue());
+        });
+
+        Pane contentPane = new Pane();
+        contentPane.getChildren().addAll(root, scrollBar);
+
+        return new VBox(contentPane);
    }
 
 }

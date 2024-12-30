@@ -1,22 +1,34 @@
 package com.mathapp.grade5.Algebra;
 
+import com.mathapp.MathApp;
+
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import javafx.scene.Scene;
 public class chapter6{
     private static Stage primaryStage;
 
-    public VBox getChapter6UIalgebra5Grade(Stage stage){
+    public Scene getChapter6UIalgebra5Grade(Stage stage){
 
         primaryStage = stage;
 
         Label labelLesson1 = new Label("Let's learn more about ' Transformations '");
+        labelLesson1.getStyleClass().add("label");
         Button buttonLesson1 = new Button("Transformations");
+        buttonLesson1.getStyleClass().add("button");
         Label labelLesson2 = new Label("Let's learn more about ' Approximates '");
+        labelLesson2.getStyleClass().add("label");
         Button buttonLesson2 = new Button("Subtraction of natural numbers");
+        buttonLesson2.getStyleClass().add("button");
         Label labelLesson3 = new Label("Let's learn more about ' Comparison, ordering and placement on the axis '");
+        labelLesson3.getStyleClass().add("label");
         Button buttonLesson3 = new Button("Comparison, ordering and placement on the axis");
+        buttonLesson3.getStyleClass().add("button");
+
+        Button back = new Button("Back");
+        back.getStyleClass().add("button");
 
         buttonLesson1.setOnAction(event->{
             System.out.println("To be continued");
@@ -30,9 +42,16 @@ public class chapter6{
             System.out.println("To be continued");
         });
 
-        VBox root = new VBox(10);
-        root.getChildren().addAll(labelLesson1, buttonLesson1, labelLesson2, buttonLesson2, labelLesson3, buttonLesson3);
+        back.setOnAction(event->{
+            MathApp.show5thGradeAlgebra();
+        });
 
-        return root;
+        VBox root = new VBox(10);
+        root.getChildren().addAll(labelLesson1, buttonLesson1, labelLesson2, buttonLesson2, labelLesson3, buttonLesson3, back);
+
+        Scene scene = new Scene(root, 800, 600);
+        scene.getStylesheets().add(getClass().getResource("/styles/algebra/5thGrade.css").toExternalForm());
+
+        return scene;
     }
 }

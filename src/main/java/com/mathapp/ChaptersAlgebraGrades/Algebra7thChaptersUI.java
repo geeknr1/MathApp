@@ -11,6 +11,8 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.scene.control.ScrollBar;
+import javafx.scene.layout.Pane;
 
 /**
  * Clasa aceasta arata capitolele pe care ar trebui sa le aiba subiectele algebrei in clasa a saptea, fiecare capitol avand o eticheta si un buton de acces
@@ -79,7 +81,22 @@ public class Algebra7thChaptersUI{
         VBox root = new VBox(10);
         root.getChildren().addAll(chapter1Label, chapter1Button, chapter2Label, chapter2Button, chapter3Label, chapter3Button, chapter4Label, chapter4Button, back);
 
-        return root;
+        ScrollBar scrollBar = new ScrollBar();
+        scrollBar.setOrientation(javafx.geometry.Orientation.VERTICAL);
+
+        scrollBar.setMin(0);
+        scrollBar.setMax(400);
+        scrollBar.setPrefHeight(800);
+        scrollBar.setLayoutX(580);
+
+        scrollBar.valueProperty().addListener((obs, oldVal, newVal) -> {
+            root.setLayoutY(-newVal.doubleValue());
+        });
+
+        Pane contentPane = new Pane();
+        contentPane.getChildren().addAll(root, scrollBar);
+
+        return new VBox(contentPane);
    }
 
 }

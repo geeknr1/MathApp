@@ -4,6 +4,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+
+import com.mathapp.MathApp;
 public class chapter6{
     private static Stage primaryStage;
 
@@ -15,6 +17,8 @@ public class chapter6{
         Button buttonLesson1 = new Button("Distance from a point to a line");
         Label labelLesson2 = new Label("Let's learn more about the 'Distance from a point to a plane' and the 'Distance between two parallel planes'");
         Button buttonLesson2 = new Button("Distance from a point to a plane. Distance between two parallel planes");
+
+        Button back = new Button("Back");
         
         buttonLesson1.setOnAction(event->{
             System.out.println("To be continued");
@@ -24,8 +28,12 @@ public class chapter6{
             System.out.println("To be continued");
         });
 
+        back.setOnAction(event->{
+            MathApp.show8thGradeGeometry();
+        });
+
         VBox root = new VBox(10);
-        root.getChildren().addAll(labelLesson1, buttonLesson1, labelLesson2, buttonLesson2);
+        root.getChildren().addAll(labelLesson1, buttonLesson1, labelLesson2, buttonLesson2, back);
 
         return root;
     }

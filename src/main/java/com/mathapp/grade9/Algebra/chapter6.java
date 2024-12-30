@@ -4,6 +4,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+
+import com.mathapp.MathApp;
 public class chapter6{
     private static Stage primaryStage;
 
@@ -19,6 +21,8 @@ public class chapter6{
         Button buttonLesson3 = new Button("Viete's relations. Symmetrical systems of linear equations. The sign and position of the roots of the quadratic function");
         Label labelLesson4 = new Label("Let's learn more about the 'Relative positions of a line with respect to a parabola' ; the 'Relative positions of two parabolas' and the 'Systems of equations'");
         Button buttonLesson4 = new Button("The relative positions of a line with respect to a parabola. The relative positions of two parabolas. Systems of equations");
+
+        Button back = new Button("Back");
 
         buttonLesson1.setOnAction(event->{
             System.out.println("To be continued");
@@ -36,9 +40,13 @@ public class chapter6{
             System.out.println("To be continued");
         });
 
+        back.setOnAction(event->{
+            MathApp.show9thGradeAlgebra();
+        });
+
         VBox root = new VBox(10);
         root.getChildren().addAll(labelLesson1, buttonLesson1, labelLesson2, buttonLesson2, labelLesson3, buttonLesson3, 
-                                  labelLesson4, buttonLesson4);
+                                  labelLesson4, buttonLesson4, back);
 
         return root;
     }
