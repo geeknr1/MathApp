@@ -14,12 +14,9 @@ public class Pair{
         return this.answer;
     }
 
-    public boolean getCheckedAnswer(String otherAnswer){
-        if(this.answer.equals(otherAnswer))
-            this.checkAnswer = true;
-        else
-            this.checkAnswer = false;
-
-        return this.checkAnswer;
+    public boolean getCheckedAnswer(String userAnswer){
+        if(this.answer.equals(userAnswer))
+            return true;
+        return false;
     }
 }
