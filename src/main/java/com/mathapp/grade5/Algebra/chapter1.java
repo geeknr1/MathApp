@@ -1,12 +1,16 @@
 package com.mathapp.grade5.Algebra;
 
 import com.mathapp.MathApp;
+import com.mathapp.grade5.Algebra.ch1Lessons.Lesson1;
+import com.mathapp.grade5.Algebra.ch1Lessons.Lesson2;
+import com.mathapp.grade5.Algebra.ch1Lessons.Lesson3;
+import com.mathapp.grade5.Algebra.ch1Lessons.Lesson4;
 
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import javafx.scene.Scene;
 
 public class chapter1{
     private static Stage primaryStage;
@@ -36,19 +40,27 @@ public class chapter1{
         back.getStyleClass().add("button");
 
         buttonLesson1.setOnAction(event->{
-            System.out.println("To be continued");
+            Lesson1 algebraCh1Gr5Lesson1UI = new Lesson1();
+            Scene algebraCh1Gr5Lesson1Scene = algebraCh1Gr5Lesson1UI.getLesson1UIch1(stage);
+            primaryStage.setScene(algebraCh1Gr5Lesson1Scene);
         });
 
         buttonLesson2.setOnAction(event->{
-            System.out.println("To be continued");
+            Lesson2 algebraCh1Gr5Lesson2UI = new Lesson2();
+            Scene algebraCh1Gr5Lesson2Scene = algebraCh1Gr5Lesson2UI.getLesson2UIch1(stage);
+            primaryStage.setScene(algebraCh1Gr5Lesson2Scene);
         });
 
         buttonLesson3.setOnAction(event->{
-            System.out.println("To be continued");
+            Lesson3 algebraCh1Gr5Lesson3UI = new Lesson3();
+            Scene algebraCh1Gr5Lesson3Scene = algebraCh1Gr5Lesson3UI.getLesson3UIch1(stage);
+            primaryStage.setScene(algebraCh1Gr5Lesson3Scene);
         });
 
         buttonLesson4.setOnAction(event->{
-            System.out.println("To be continued");
+            Lesson4 algebraCh1Gr5Lesson4UI = new Lesson4();
+            Scene algebraCh1Gr5Lesson4Scene = algebraCh1Gr5Lesson4UI.getLesson4UIch1(stage);
+            primaryStage.setScene(algebraCh1Gr5Lesson4Scene);
         });
 
         back.setOnAction(event->{

@@ -1,4 +1,4 @@
-package com.mathapp.grade5.Algebra.lessonsChapter1;
+package com.mathapp.grade5.Algebra.ch1Lessons;
 
 public class Pair{
     private String answer;
@@ -15,8 +15,7 @@ public class Pair{
     }
 
     public boolean getCheckedAnswer(String userAnswer){
-        if(this.answer.equals(userAnswer))
-            return true;
-        return false;
+        this.checkAnswer = this.answer.equals(userAnswer);
+        return this.checkAnswer;
     }
 }
