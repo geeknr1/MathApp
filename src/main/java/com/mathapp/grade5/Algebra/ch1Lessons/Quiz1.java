@@ -2,6 +2,8 @@ package com.mathapp.grade5.Algebra.ch1Lessons;
 
 import java.util.Arrays;
 
+import javafx.scene.Scene;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class Quiz1{
@@ -33,8 +35,10 @@ public class Quiz1{
         quiz1.addQuizSingleChoice("What's the smallest 4-digit natural number, knowing the digits are distinct?", "1023");
     }
 
-    public Quiz getQuiz(){
-        generateQuiz();
-        return quiz1;
+    public Scene getQuizUI(Stage stage){
+        primaryStage = stage;
+        VBox root = quiz1.generateQuiz(primaryStage); 
+        Scene quizScene = new Scene(root, 800, 600);
+        return quizScene;
     }
 }

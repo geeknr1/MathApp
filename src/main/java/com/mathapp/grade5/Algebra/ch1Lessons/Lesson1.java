@@ -35,7 +35,8 @@ public class Lesson1{
 
         practiceButton.setOnAction(event->{
             Quiz1 quiz1UI = new Quiz1();
-            //Scene quiz1Scene = quiz1UI.getQuiz();
+            Scene quiz1Scene = quiz1UI.getQuizUI(stage);
+            primaryStage.setScene(quiz1Scene);
         });
 
         back.setOnAction(event->{
