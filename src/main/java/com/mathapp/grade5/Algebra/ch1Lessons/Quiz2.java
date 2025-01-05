@@ -2,13 +2,15 @@ package com.mathapp.grade5.Algebra.ch1Lessons;
 
 import java.util.Arrays;
 
+import javafx.scene.Scene;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class Quiz2{
     private static Stage primaryStage;
     private static Quiz quiz2;
 
-    public void generateQuiz(){
+    public void generateQuiz(Stage stage){
         quiz2.addQuizMultipleChoice("Complete the following string of numbers: 1, ..., 9, 27, 81, 243", Arrays.asList(new Pair("3", true), 
                                                                                                                       new Pair("5", false),
                                                                                                                       new Pair("7", false),
@@ -31,5 +33,12 @@ public class Quiz2{
                                                                                                                                    new Pair("14", true)));
 
         quiz2.addQuizSingleChoice("Complete the following string of numbers: 1, 2, ..., 8, 16", "4");
+    }
+
+    public Scene getQuizUI(Stage stage){
+        primaryStage = stage;
+        VBox root = quiz2.generateQuiz(primaryStage); 
+        Scene quizScene = new Scene(root, 800, 600);
+        return quizScene;
     }
 }

@@ -10,7 +10,7 @@ public class Quiz1{
     private static Stage primaryStage;
     private static Quiz quiz1;
 
-    public void generateQuiz(){
+    public void generateQuiz(Stage stage){
         quiz1.addQuizMultipleChoice("Type the following roman numbers in arabic digits: LXII, CLXV, CLXIII, XXXIII and CCCLXXXVII", Arrays.asList(new Pair("62, 163, 63, 25, 300", false), 
                                                                                                                                     new Pair("41, 165, 163, 33, 300", false),
                                                                                                                                     new Pair("62, 165, 163, 33, 387", true),

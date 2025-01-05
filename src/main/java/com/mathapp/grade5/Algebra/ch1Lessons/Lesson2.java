@@ -36,7 +36,9 @@ public class Lesson2{
         back.getStyleClass().add("button");
 
         practiceButton.setOnAction(event->{
-            System.out.println("To be continued");
+            Quiz2 quiz2UI = new Quiz2();
+            Scene quiz2Scene = quiz2UI.getQuizUI(stage);
+            primaryStage.setScene(quiz2Scene);
         });
 
         back.setOnAction(event->{

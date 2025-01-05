@@ -15,7 +15,6 @@ public class Pair{
     }
 
     public boolean getCheckedAnswer(String userAnswer){
-        this.checkAnswer = this.answer.equals(userAnswer);
-        return this.checkAnswer;
+        return this.answer.equals(userAnswer);
     }
 }
