@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 public class Lesson1{
     private static Stage primaryStage;
 
-    public Scene getLesson1UIch1(Stage stage){
+    public Scene getLesson1UIch1Grade5Alg(Stage stage){
 
         primaryStage = stage;
 
@@ -46,9 +46,6 @@ public class Lesson1{
         VBox root = new VBox(10);
         root.getChildren().addAll(theoryLabel, practiceButton, back);
 
-        Scene scene = new Scene(root, 800, 600);
-        scene.getStylesheets().add(getClass().getResource("/styles/mathsubjects.css").toExternalForm());
-
         ScrollBar scrollBar = new ScrollBar();
         scrollBar.setOrientation(javafx.geometry.Orientation.VERTICAL);
 
@@ -65,9 +62,9 @@ public class Lesson1{
         contentPane.getChildren().addAll(root, scrollBar);
 
         VBox newRoot = new VBox(contentPane);
-        Scene sceneNew = new Scene(newRoot, 800, 600);
-        sceneNew.getStylesheets().add(getClass().getResource("/styles/algebra/5thGrade.css").toExternalForm());
+        Scene scene = new Scene(newRoot, 800, 600);
+        scene.getStylesheets().add(getClass().getResource("/styles/algebra/5thGrade.css").toExternalForm());
 
-        return sceneNew;
+        return scene;
     }
 }

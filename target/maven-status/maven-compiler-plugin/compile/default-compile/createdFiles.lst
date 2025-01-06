@@ -45,6 +45,7 @@ com/mathapp/grade11/Math_Analysis/chapter1.class
 com/mathapp/grade8/Algebra/chapter2.class
 com/mathapp/SignUp.class
 com/mathapp/grade5/Geometry/chapter3.class
+com/mathapp/Images/Image_Array.class
 com/mathapp/UsefulCode/MathFact.class
 com/mathapp/grade9/Algebra/chapter3.class
 com/mathapp/MathSubjects/SubjectGeometryUI.class
@@ -112,6 +113,7 @@ com/mathapp/grade9/Algebra/chapter6.class
 com/mathapp/grade11/Algebra/chapter2.class
 com/mathapp/ChaptersAlgebraGrades/Algebra7thChaptersUI.class
 com/mathapp/ChaptersGeometryGrades/Geometry8thChaptersUI.class
+com/mathapp/Images/Image_Array$1.class
 com/mathapp/MostImportantUIs/FirstGradeUI.class
 com/mathapp/grade6/Geometry/chapter5.class
 com/mathapp/grade12/Algebra/chapter3.class

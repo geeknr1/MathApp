@@ -1,12 +1,20 @@
 package com.mathapp.grade5.Algebra.ch1Lessons;
 
+import com.mathapp.grade5.Algebra.chapter1;
+
 import java.util.Arrays;
 
 import javafx.stage.Stage;
+import javafx.scene.Scene;
+import javafx.scene.layout.VBox;
+import javafx.scene.layout.Pane;
+import javafx.scene.control.ScrollBar;
+import javafx.scene.control.Button;
+
 
 public class Quiz3{
     private static Stage primaryStage;
-    private static Quiz quiz3;
+    private static Quiz quiz3 = new Quiz();
 
     public void generateQuiz(){
         quiz3.addQuizMultipleChoice("It is known that a five-digit natural number is equal to its inverted one, and the tens digit is 4. What is the smallest number that satisfies this condition?", 
@@ -35,5 +43,39 @@ public class Quiz3{
                                                   new Pair("10", true)));
 
         quiz3.addQuizSingleChoice("Write in descending order all the 3-digit natural numbers whose product of digits is 9", "911, 331, 313, 191, 119");
+    }
+
+    public Scene getQuizUI(Stage stage){
+        primaryStage = stage;
+        VBox root = quiz3.generateQuiz(primaryStage); 
+
+        Button back = new Button("Back");
+
+        back.setOnAction(event->{
+            chapter1.showAlgebra5thCh1Lesson2();
+        });
+
+        root.getChildren().add(back);
+
+        ScrollBar scrollBar = new ScrollBar();
+        scrollBar.setOrientation(javafx.geometry.Orientation.VERTICAL);
+
+        scrollBar.setMin(0);
+        scrollBar.setMax(400);
+        scrollBar.setPrefHeight(800);
+        scrollBar.setLayoutX(850);
+
+        scrollBar.valueProperty().addListener((obs, oldVal, newVal) -> {
+            root.setLayoutY(-newVal.doubleValue());
+        });
+
+        Pane contentPane = new Pane();
+        contentPane.getChildren().addAll(root, scrollBar);
+
+        VBox newRoot = new VBox(contentPane);
+        Scene quizScene = new Scene(newRoot, 800, 600);
+        quizScene.getStylesheets().add(getClass().getResource("/styles/algebra/5thGrade.css").toExternalForm());
+
+        return quizScene;
     }
 }

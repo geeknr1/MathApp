@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 public class Lesson2{
     private static Stage primaryStage;
 
-    public Scene getLesson2UIch1(Stage stage){
+    public Scene getLesson2UIch1Grade5Alg(Stage stage){
 
         primaryStage = stage;
 

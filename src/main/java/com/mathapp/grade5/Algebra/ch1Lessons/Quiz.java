@@ -1,5 +1,7 @@
 package com.mathapp.grade5.Algebra.ch1Lessons;
 
+import com.mathapp.grade5.Algebra.chapter1;
+
 import java.util.HashMap;
 import java.util.List;
 
@@ -77,6 +79,7 @@ public class Quiz{
             int avgXP = 15;
             int highXP = 30;
             questionNR = mcQuiz.size() + scQuiz.size();
+            int totalMaxSCore = avgXP * mcQuiz.size() + highXP * scQuiz.size();
             for(HashMap.Entry<String, List<Pair>> entry: mcQuiz.entrySet()){
                 String questionText = entry.getKey();
                 List<Pair> answersToQuestion = entry.getValue();
@@ -87,7 +90,7 @@ public class Quiz{
                     RadioButton selectedButton = (RadioButton)group.getSelectedToggle();
                     String userAnswer = selectedButton.getText();
                     for(Pair pair: answersToQuestion){
-                        if(userAnswer.equals(pair.getAnswer()) && pair.getCheckedAnswer(userAnswer) == true)
+                        if(userAnswer.equals(pair.getAnswer()) && pair.getCheckedAnswer() == true)
                             totalScore += avgXP;
                     }
                 }    
@@ -98,11 +101,12 @@ public class Quiz{
                 Pair answerToQuestion = entry.getValue();
 
                 TextField userAnswer = completeAnswerMap.get(questionText);
-                if(userAnswer != null && userAnswer.getText().equals(answerToQuestion.getAnswer()) && answerToQuestion.getCheckedAnswer(userAnswer.getText()) == true){
+                if(userAnswer != null && userAnswer.getText().equals(answerToQuestion.getAnswer()) && answerToQuestion.getCheckedAnswer() == true){
                     totalScore += highXP;
                 }
             }
-            resultLabel.setText("Total score accumulated: " + totalScore);
+            int proportionalScore = (100 * totalScore) / totalMaxSCore;
+            resultLabel.setText("Total score accumulated: " + totalScore + "\nThe percentage accumulated: " + proportionalScore + "%");
         });
 
         root.getChildren().addAll(resultLabel, sendButton);

@@ -14,7 +14,7 @@ public class Pair{
         return this.answer;
     }
 
-    public boolean getCheckedAnswer(String userAnswer){
-        return this.answer.equals(userAnswer);
+    public boolean getCheckedAnswer(){
+        return this.checkAnswer;
     }
 }

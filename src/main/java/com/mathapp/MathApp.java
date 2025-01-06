@@ -22,6 +22,10 @@ import com.mathapp.MathSubjects.SubjectMathAnalysisUI;
 import com.mathapp.MostImportantUIs.LogInUI;
 import com.mathapp.MostImportantUIs.MathSubjectsUI;
 import com.mathapp.MostImportantUIs.SignUpUI;
+import com.mathapp.grade5.Algebra.ch1Lessons.Lesson1;
+import com.mathapp.grade5.Algebra.ch1Lessons.Lesson2;
+import com.mathapp.grade5.Algebra.ch1Lessons.Lesson3;
+import com.mathapp.grade5.Algebra.ch1Lessons.Lesson4;
 
 import javafx.application.Application;
 import javafx.scene.Scene;

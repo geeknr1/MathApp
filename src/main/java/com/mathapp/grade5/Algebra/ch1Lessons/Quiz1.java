@@ -1,16 +1,21 @@
 package com.mathapp.grade5.Algebra.ch1Lessons;
 
+import com.mathapp.grade5.Algebra.chapter1;
+
 import java.util.Arrays;
 
 import javafx.scene.Scene;
+import javafx.scene.control.ScrollBar;
+import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 public class Quiz1{
     private static Stage primaryStage;
-    private static Quiz quiz1;
+    private static Quiz quiz1 = new Quiz();
 
-    public void generateQuiz(Stage stage){
+    public void generateQuestions(Stage stage){
         quiz1.addQuizMultipleChoice("Type the following roman numbers in arabic digits: LXII, CLXV, CLXIII, XXXIII and CCCLXXXVII", Arrays.asList(new Pair("62, 163, 63, 25, 300", false), 
                                                                                                                                     new Pair("41, 165, 163, 33, 300", false),
                                                                                                                                     new Pair("62, 165, 163, 33, 387", true),
@@ -37,8 +42,37 @@ public class Quiz1{
 
     public Scene getQuizUI(Stage stage){
         primaryStage = stage;
-        VBox root = quiz1.generateQuiz(primaryStage); 
-        Scene quizScene = new Scene(root, 800, 600);
+        generateQuestions(stage);
+        VBox root = quiz1.generateQuiz(primaryStage);
+
+        Button back = new Button("Back");
+
+        back.setOnAction(event->{
+            chapter1.showAlgebra5thCh1Lesson1();
+        });
+
+        root.getChildren().add(back);
+
+        
+        ScrollBar scrollBar = new ScrollBar();
+        scrollBar.setOrientation(javafx.geometry.Orientation.VERTICAL);
+
+        scrollBar.setMin(0);
+        scrollBar.setMax(400);
+        scrollBar.setPrefHeight(800);
+        scrollBar.setLayoutX(850);
+
+        scrollBar.valueProperty().addListener((obs, oldVal, newVal) -> {
+            root.setLayoutY(-newVal.doubleValue());
+        });
+
+        Pane contentPane = new Pane();
+        contentPane.getChildren().addAll(root, scrollBar);
+
+        VBox newRoot = new VBox(contentPane);
+        Scene quizScene = new Scene(newRoot, 800, 600);
+        quizScene.getStylesheets().add(getClass().getResource("/styles/algebra/5thGrade.css").toExternalForm());
+
         return quizScene;
     }
 }

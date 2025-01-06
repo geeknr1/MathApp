@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 public class Lesson3{
     private static Stage primaryStage;
 
-    public Scene getLesson3UIch1(Stage stage){
+    public Scene getLesson3UIch1Grade5Alg(Stage stage){
 
         primaryStage = stage;
 
@@ -37,7 +37,9 @@ public class Lesson3{
         back.getStyleClass().add("button");
 
         practiceButton.setOnAction(event->{
-            System.out.println("To be continued");
+            Quiz3 quiz3UI = new Quiz3();
+            Scene quiz3Scene = quiz3UI.getQuizUI(stage);
+            primaryStage.setScene(quiz3Scene);
         });
 
         back.setOnAction(event->{
