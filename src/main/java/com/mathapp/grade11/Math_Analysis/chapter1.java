@@ -7,6 +7,9 @@ import javafx.stage.Stage;
 import javafx.scene.Scene;
 
 import com.mathapp.MathApp;
+import com.mathapp.grade11.Math_Analysis.ch1Lessons.Lesson1;
+import com.mathapp.grade11.Math_Analysis.ch1Lessons.Lesson2;
+import com.mathapp.grade11.Math_Analysis.ch1Lessons.Lesson3;
 public class chapter1{
     private static Stage primaryStage;
 
@@ -31,15 +34,21 @@ public class chapter1{
         back.getStyleClass().add("button");
         
         buttonLesson1.setOnAction(event->{
-            System.out.println("To be continued");
+            Lesson1 algebraCh1Gr11Lesson1UI = new Lesson1();
+            Scene algebraCh1Gr11Lesson1Scene = algebraCh1Gr11Lesson1UI.getLesson1UIch1Grade11MA(stage);
+            primaryStage.setScene(algebraCh1Gr11Lesson1Scene);
         });
 
         buttonLesson2.setOnAction(event->{
-            System.out.println("To be continued");
+            Lesson2 algebraCh1Gr11Lesson2UI = new Lesson2();
+            Scene algebraCh1Gr11Lesson2Scene = algebraCh1Gr11Lesson2UI.getLesson2UIch1Grade11MA(stage);
+            primaryStage.setScene(algebraCh1Gr11Lesson2Scene);
         });
 
         buttonLesson3.setOnAction(event->{
-            System.out.println("To be continued");
+            Lesson3 algebraCh1Gr11Lesson3UI = new Lesson3();
+            Scene algebraCh1Gr11Lesson3Scene = algebraCh1Gr11Lesson3UI.getLesson3UIch1Grade11MA(stage);
+            primaryStage.setScene(algebraCh1Gr11Lesson3Scene);
         });
 
         back.setOnAction(event->{
@@ -53,5 +62,23 @@ public class chapter1{
         scene.getStylesheets().add(getClass().getResource("/styles/algebra/5thGrade.css").toExternalForm());
 
         return scene;
+    }
+
+    public static void showMA5thCh1Lesson1(){
+        Lesson1 lesson1Grade11MAUI = new Lesson1();
+        Scene lesson1Grade11MAScene = lesson1Grade11MAUI.getLesson1UIch1Grade11MA(primaryStage);
+        primaryStage.setScene(lesson1Grade11MAScene);
+    }
+
+    public static void showMA5thCh1Lesson2(){
+        Lesson2 lesson2Grade11MAUI = new Lesson2();
+        Scene lesson2Grade11MAScene = lesson2Grade11MAUI.getLesson2UIch1Grade11MA(primaryStage);
+        primaryStage.setScene(lesson2Grade11MAScene);
+    }
+
+    public static void showMA5thCh1Lesson3(){
+        Lesson3 lesson3Grade5AlgUI = new Lesson3();
+        Scene lesson3Grade5AlgScene = lesson3Grade5AlgUI.getLesson3UIch1Grade11MA(primaryStage);
+        primaryStage.setScene(lesson3Grade5AlgScene);
     }
 }

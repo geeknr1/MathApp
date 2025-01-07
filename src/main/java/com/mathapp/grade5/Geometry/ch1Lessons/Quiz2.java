@@ -1,19 +1,19 @@
-package com.mathapp.grade5.Algebra.ch1Lessons;
+package com.mathapp.grade5.Geometry.ch1Lessons;
+
+import java.util.Arrays;
 
 import com.mathapp.grade5.Algebra.chapter1;
 import com.mathapp.Quiz;
 import com.mathapp.Pair;
 
-import java.util.Arrays;
-
 import javafx.scene.Scene;
-import javafx.scene.control.ScrollBar;
 import javafx.scene.control.Button;
-import javafx.scene.layout.VBox;
+import javafx.scene.control.ScrollBar;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class Quiz1{
+public class Quiz2{
     private static Stage primaryStage;
     private static Quiz quiz1 = new Quiz();
 

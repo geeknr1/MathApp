@@ -1,6 +1,4 @@
-package com.mathapp.grade5.Algebra.ch1Lessons;
-
-import com.mathapp.grade5.Algebra.chapter1;
+package com.mathapp;
 
 import java.util.HashMap;
 import java.util.List;

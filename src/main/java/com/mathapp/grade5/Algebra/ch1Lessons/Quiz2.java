@@ -1,12 +1,14 @@
 package com.mathapp.grade5.Algebra.ch1Lessons;
 
-import com.mathapp.grade5.Algebra.chapter1;
-
 import java.util.Arrays;
 
+import com.mathapp.Pair;
+import com.mathapp.Quiz;
+import com.mathapp.grade5.Algebra.chapter1;
+
 import javafx.scene.Scene;
-import javafx.scene.control.ScrollBar;
 import javafx.scene.control.Button;
+import javafx.scene.control.ScrollBar;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;

@@ -1,12 +1,13 @@
 package com.mathapp.grade5.Geometry;
 
+import com.mathapp.MathApp;
+import com.mathapp.grade5.Geometry.ch1Lessons.Lesson1;
+
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import javafx.scene.Scene;
-
-import com.mathapp.MathApp;
 public class chapter1{
     private static Stage primaryStage;
 
@@ -31,8 +32,12 @@ public class chapter1{
         back.getStyleClass().add("button");
 
         buttonLesson1.setOnAction(event->{
-            System.out.println("To be continued");
+            Lesson1 geometryCh1Gr5Lesson1UI = new Lesson1();
+            Scene geometryCh1Gr5Lesson1Scene = geometryCh1Gr5Lesson1UI.getLesson1UIch1Grade5Geo(stage);
+            primaryStage.setScene(geometryCh1Gr5Lesson1Scene);
         });
+
+        
 
         buttonLesson2.setOnAction(event->{
             System.out.println("To be continued");
@@ -53,5 +58,11 @@ public class chapter1{
         scene.getStylesheets().add(getClass().getResource("/styles/algebra/5thGrade.css").toExternalForm());
 
         return scene;
+    }
+
+     public static void showGeometry5thCh1Lesson1(){
+        Lesson1 lesson1Grade5AlgUI = new Lesson1();
+        Scene lesson1Grade5AlgScene = lesson1Grade5AlgUI.getLesson1UIch1Grade5Geo(primaryStage);
+        primaryStage.setScene(lesson1Grade5AlgScene);
     }
 }

@@ -1,6 +1,8 @@
 package com.mathapp.grade5.Algebra.ch1Lessons;
 
 import com.mathapp.grade5.Algebra.chapter1;
+import com.mathapp.Quiz;
+import com.mathapp.Pair;
 
 import java.util.Arrays;
 

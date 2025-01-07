@@ -1,4 +1,4 @@
-package com.mathapp.grade5.Algebra.ch1Lessons;
+package com.mathapp;
 
 public class Pair{
     private String answer;
