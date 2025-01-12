@@ -46,7 +46,8 @@ public class Quiz1{
         generateQuestions(stage);
         VBox root = quiz1.generateQuiz(primaryStage);
 
-        Image image = new Image("/com/mathapp/grade5/Geometry/ch1Lessons/quiz1_img/abd1.PNG");
+        String imagePath = getClass().getResource("/geometry/abd1.PNG").toExternalForm();
+        Image image = new Image(imagePath);
         ImageView imageView1 = new ImageView(image);
         imageView1.setFitHeight(155);
         imageView1.setFitWidth(200);
@@ -56,7 +57,8 @@ public class Quiz1{
         generateQuestions2();
         VBox root2 = quiz1Part2.generateQuiz(primaryStage);
 
-        Image image2 = new Image("/com/mathapp/grade5/Geometry/ch1Lessons/quiz1_img/abd2.PNG");
+        String image2Path = getClass().getResource("/geometry/abd2.PNG").toExternalForm();
+        Image image2 = new Image(image2Path);
         ImageView imageView2 = new ImageView(image2);
         imageView2.setFitHeight(155);
         imageView2.setFitWidth(200);

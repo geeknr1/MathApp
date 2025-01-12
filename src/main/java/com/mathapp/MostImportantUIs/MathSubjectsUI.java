@@ -41,6 +41,7 @@ public class MathSubjectsUI{
         GeometryButton.getStyleClass().add("button");
         Button MathematicalAnalysisButton = new Button("Mathematical Analysis curriculum");
         MathematicalAnalysisButton.getStyleClass().add("button");
+        Button mathMemes = new Button("Math Memes :)");
         Button disconnect = new Button("Quit");
         disconnect.getStyleClass().add("button");
 
@@ -63,12 +64,18 @@ public class MathSubjectsUI{
             primaryStage.setScene(mathAnalysisScene);
         });
 
+        mathMemes.setOnAction(event->{
+            MemeUI memesUI = new MemeUI();
+            Scene memeScene = memesUI.getMemeListUI(primaryStage);
+            primaryStage.setScene(memeScene);
+        });
+
         disconnect.setOnAction(event->{
             MathApp.showLogIn();
         });
 
         VBox root = new VBox(10);
-        root.getChildren().addAll(AlgebraLabel, AlgebraButton, GeometryLabel, GeometryButton, MathematicalAnalysisLabel, MathematicalAnalysisButton, disconnect, resultLabel);
+        root.getChildren().addAll(AlgebraLabel, AlgebraButton, GeometryLabel, GeometryButton, MathematicalAnalysisLabel, MathematicalAnalysisButton, mathMemes, disconnect, resultLabel);
 
         ScrollBar scrollBar = new ScrollBar();
         scrollBar.setOrientation(javafx.geometry.Orientation.VERTICAL);
@@ -90,6 +97,12 @@ public class MathSubjectsUI{
         scene.getStylesheets().add(getClass().getResource("/styles/mathsubjects.css").toExternalForm());
 
         return scene;
+   }
+
+   public static void showMathSubjectsUI(){
+    MathSubjectsUI mathSubjectsUI = new MathSubjectsUI();
+    Scene subjectsScene = mathSubjectsUI.getMathSubjectsUI(primaryStage);
+    primaryStage.setScene(subjectsScene);
    }
 
 }

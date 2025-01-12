@@ -1,24 +1,24 @@
 package com.mathapp.grade5.Algebra.ch1Lessons;
 
+import java.util.Arrays;
+
 import com.mathapp.grade5.Algebra.chapter1;
 import com.mathapp.Quiz;
 import com.mathapp.Pair;
 
-import java.util.Arrays;
-
-import javafx.stage.Stage;
 import javafx.scene.Scene;
-import javafx.scene.layout.VBox;
-import javafx.scene.layout.Pane;
-import javafx.scene.control.ScrollBar;
 import javafx.scene.control.Button;
+import javafx.scene.control.ScrollBar;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
 
 public class Quiz3{
     private static Stage primaryStage;
     private static Quiz quiz3 = new Quiz();
 
-    public void generateQuiz(){
+    public void generateQuestions(){
         quiz3.addQuizMultipleChoice("It is known that a five-digit natural number is equal to its inverted one, and the tens digit is 4. What is the smallest number that satisfies this condition?", 
                                     Arrays.asList(new Pair("10000", true), 
                                                   new Pair("24041", false),
@@ -48,7 +48,7 @@ public class Quiz3{
     }
 
     public Scene getQuizUI(Stage stage){
-        primaryStage = stage;
+        generateQuestions();
         VBox root = quiz3.generateQuiz(primaryStage); 
 
         Button back = new Button("Back");

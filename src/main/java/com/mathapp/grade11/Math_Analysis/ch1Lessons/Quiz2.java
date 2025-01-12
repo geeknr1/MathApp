@@ -1,23 +1,23 @@
 package com.mathapp.grade11.Math_Analysis.ch1Lessons;
 
-import com.mathapp.grade11.Math_Analysis.chapter1;
-import com.mathapp.Quiz;
-import com.mathapp.Pair;
-
 import java.util.Arrays;
 
+import com.mathapp.Pair;
+import com.mathapp.Quiz;
+import com.mathapp.grade11.Math_Analysis.chapter1;
+
 import javafx.scene.Scene;
-import javafx.scene.control.ScrollBar;
 import javafx.scene.control.Button;
-import javafx.scene.layout.VBox;
+import javafx.scene.control.ScrollBar;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class Quiz2{
     private static Stage primaryStage;
     private static Quiz quiz2 = new Quiz();
 
-    public void generateQuestions(Stage stage){
+    public void generateQuestions(){
         quiz2.addQuizMultipleChoice("What is the result of calculating the limit of the following sequence: a_{n} = (4*n+2)/(5^n), n≥1", Arrays.asList(new Pair("0", true), 
                                                                                                                                     new Pair("1", false),
                                                                                                                                     new Pair("4/5", false),
@@ -28,7 +28,7 @@ public class Quiz2{
 
     public Scene getQuizUI(Stage stage){
         primaryStage = stage;
-        generateQuestions(stage);
+        generateQuestions();
         VBox root = quiz2.generateQuiz(primaryStage);
 
         Button back = new Button("Back");

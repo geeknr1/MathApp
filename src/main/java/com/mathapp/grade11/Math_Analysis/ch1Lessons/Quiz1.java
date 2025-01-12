@@ -1,23 +1,23 @@
 package com.mathapp.grade11.Math_Analysis.ch1Lessons;
 
-import com.mathapp.grade11.Math_Analysis.chapter1;
-import com.mathapp.Quiz;
-import com.mathapp.Pair;
-
 import java.util.Arrays;
 
+import com.mathapp.Pair;
+import com.mathapp.Quiz;
+import com.mathapp.grade11.Math_Analysis.chapter1;
+
 import javafx.scene.Scene;
-import javafx.scene.control.ScrollBar;
 import javafx.scene.control.Button;
-import javafx.scene.layout.VBox;
+import javafx.scene.control.ScrollBar;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class Quiz1{
     private static Stage primaryStage;
     private static Quiz quiz1 = new Quiz();
 
-    public void generateQuestions(Stage stage){
+    public void generateQuestions(){
         quiz1.addQuizMultipleChoice("A set X has the property p if for any x,y \u2208 M we have (x+y) belonging to M. Determine which of the following sets has the property p.", Arrays.asList(new Pair("A=(0,∞)", false), 
                                                                                                                                     new Pair("B=(0,1)", false),
                                                                                                                                     new Pair("C={(1/(n+1)), n \u2208 N}", true),
@@ -41,7 +41,7 @@ public class Quiz1{
 
     public Scene getQuizUI(Stage stage){
         primaryStage = stage;
-        generateQuestions(stage);
+        generateQuestions();
         VBox root = quiz1.generateQuiz(primaryStage);
 
         Button back = new Button("Back");

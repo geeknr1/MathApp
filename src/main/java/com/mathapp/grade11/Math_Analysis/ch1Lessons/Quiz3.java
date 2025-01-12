@@ -1,23 +1,23 @@
 package com.mathapp.grade11.Math_Analysis.ch1Lessons;
 
-import com.mathapp.grade11.Math_Analysis.chapter1;
-import com.mathapp.Quiz;
-import com.mathapp.Pair;
-
 import java.util.Arrays;
 
+import com.mathapp.Pair;
+import com.mathapp.Quiz;
+import com.mathapp.grade11.Math_Analysis.chapter1;
+
 import javafx.scene.Scene;
-import javafx.scene.control.ScrollBar;
 import javafx.scene.control.Button;
-import javafx.scene.layout.VBox;
+import javafx.scene.control.ScrollBar;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class Quiz3{
     private static Stage primaryStage;
     private static Quiz quiz3 = new Quiz();
 
-    public void generateQuestions(Stage stage){
+    public void generateQuestions(){
         quiz3.addQuizMultipleChoice("Here we have the sequence a_{n} = (n+2)/(n+1), n≥1. Select the affirmations which are correct.", Arrays.asList(new Pair("the sequence is strictly increasing", false), 
                                                                                                                                     new Pair("the sequence is strictly decreasing", true),
                                                                                                                                     new Pair("the sequence is divergent", false),
@@ -32,7 +32,7 @@ public class Quiz3{
 
     public Scene getQuizUI(Stage stage){
         primaryStage = stage;
-        generateQuestions(stage);
+        generateQuestions();
         VBox root = quiz3.generateQuiz(primaryStage);
 
         Button back = new Button("Back");

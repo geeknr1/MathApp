@@ -1,23 +1,23 @@
 package com.mathapp.grade5.Algebra.ch1Lessons;
 
+import java.util.Arrays;
+
 import com.mathapp.grade5.Algebra.chapter1;
 import com.mathapp.Quiz;
 import com.mathapp.Pair;
 
-import java.util.Arrays;
-
-import javafx.stage.Stage;
 import javafx.scene.Scene;
-import javafx.scene.control.ScrollBar;
 import javafx.scene.control.Button;
-import javafx.scene.layout.VBox;
+import javafx.scene.control.ScrollBar;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
 public class Quiz4{
     private static Stage primaryStage;
     private static Quiz quiz4 = new Quiz();
 
-    public void generateQuiz(){
+    public void generateQuestions(){
         quiz4.addQuizMultipleChoice("Round to hundreds the number 857", Arrays.asList(new Pair("800", false), 
                                                                                       new Pair("870", false),
                                                                                       new Pair("743", false),
@@ -43,6 +43,7 @@ public class Quiz4{
     }
 
     public Scene getQuizUI(Stage stage){
+        generateQuestions();
         primaryStage = stage;
         VBox root = quiz4.generateQuiz(primaryStage);
 

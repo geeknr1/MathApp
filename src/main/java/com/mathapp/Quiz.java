@@ -13,8 +13,8 @@ import javafx.stage.Stage;
 
 public class Quiz{
     private static Stage primaryStage;
-    private static HashMap<String, List<Pair>> mcQuiz = new HashMap<>();
-    private static HashMap<String, Pair> scQuiz = new HashMap<>();
+    private HashMap<String, List<Pair>> mcQuiz = new HashMap<>();
+    private HashMap<String, Pair> scQuiz = new HashMap<>();
     private int questionNR = 0;
     private int totalScore = 0;
 
